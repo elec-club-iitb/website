@@ -31,7 +31,7 @@ Install tightvncserver on the rpi as well as your linux powered laptop/desktop w
 
 Now we start the vnc-server in the rpi, this will broadcast the "screen" of the rpi over the server, which then can be accessed remotely from some other laptop/desktop connected with the same server. In order to do this we need to run the following command on the rpi terminal:  
 `vncserver :1 -geometry 1366x600 -depth 16 -pixelformat rgb565`  
-If you are doing this for the first time then it will ask you for settig a password (Yes, you need to remember it!). After finishing that you should see the following on the rpi's terminal.  
+If you are doing this for the first time then it will ask you for setting a password (Yes, you need to remember it!). After finishing that you should see the following on the rpi's terminal.  
 `#New ‘X’ desktop is raspberrypi:1`  
 This means you have successfully got your rpi desktop put up on your server, now you need to access it.
 
@@ -43,7 +43,7 @@ Here, rpi_ip is the static IP which you would have set for your pi. You will be 
 
 **<u>Step Four</u>**
 
-Now all you need is to get opencv installed on your rpi. To get that done just follow the steps which you will use to install opencv in nornal ubuntu based system, if you are comfortable with it then this tutorial stops here for you.For OpenCV installation Just follow the steps listed [here(OpenCV installation on Ubuntu).]({{page.assets_dir}}/opencv installation.pdf)  
+Now all you need is to get opencv installed on your rpi. To get that done just follow the steps which you will use to install opencv in normal ubuntu based system, if you are comfortable with it then this tutorial stops here for you.For OpenCV installation Just follow the steps listed [here(OpenCV installation on Ubuntu).]({{page.assets_dir}}/opencv installation.pdf)  
 You will also need two scripts in above installation the opencv installation. Get them from here:  
 [opencv2_4_6_1.sh]({{page.assets_dir}}/opencv2_4_6_1.sh)  
 [new]({{page.assets_dir}}/new)

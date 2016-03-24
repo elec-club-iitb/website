@@ -21,7 +21,7 @@ For the XLR8 competition 2015, we had made a remote control on android for the t
 
 More on differential drive here: [wiki/Differential_wheeled_robot](https://en.wikipedia.org/wiki/Differential_wheeled_robot)
 
-Each can be representaed by one bit. So we had four output pins of the ATtiny going to four inputs of the Motor Driver (L293D in our case). After that it just boils down send the correct bit sequence from the phone based on the button pressed (i.e. control expected).
+Each can be represented by one bit. So we had four output pins of the ATtiny going to four inputs of the Motor Driver (L293D in our case). After that it just boils down send the correct bit sequence from the phone based on the button pressed (i.e. control expected).
 
 ATtiny Board
 =============
