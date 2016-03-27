@@ -1,13 +1,4 @@
 /* Adjust Original Styles */
-@media (max-width: {{ site.responsive_bp | minus:1 }}px) {
-	.hero-unit {
-		padding: 19px;
-	}
-	.hero-unit header h1 {
-		font-size: 40px;
-		margin: 0;
-	}
-}
 .hero-unit header h1 {
 	margin-bottom: 0.125em;
 }
@@ -63,6 +54,7 @@ i {
 }
 #header span {
     display: inline-block;
+    max-width: 75vw;
 }
 
 /* header.html: navbar */
@@ -288,4 +280,16 @@ li.social {
     height: auto;
 
     border: 0;
+}
+@media (max-width: {{ site.responsive_bp | minus:1 }}px) {
+	.hero-unit {
+		padding: 19px;
+	}
+	.hero-unit header h1 {
+		font-size: 40px;
+		margin: 0;
+	}
+    #header h1 {
+        font-size: 1.45em;
+    }
 }
