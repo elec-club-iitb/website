@@ -11,9 +11,15 @@ group: Chat
 
 <script type="text/javascript">
     window.addEventListener("resize", function() {
-        var chatHeight = window.innerHeight - document.getElementById("header").offsetHeight - document.getElementById("navbar").offsetHeight - 100;
+        var chatHeight = window.innerHeight - document.getElementById("header").offsetHeight - document.getElementById("navbar").offsetHeight - 200;
         document.getElementById("gitterChat").setAttribute("style", "height:"+chatHeight+"px;");
     });
-    var chatHeight = window.innerHeight - document.getElementById("header").offsetHeight - document.getElementById("navbar").offsetHeight - 100;
+    var chatHeight = window.innerHeight - document.getElementById("header").offsetHeight - document.getElementById("navbar").offsetHeight - 200;
     document.getElementById("gitterChat").setAttribute("style", "height:"+chatHeight+"px;");
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        aside = document.getElementsByTagName("aside")[0];
+        aside.parentElement.removeChild(aside);
+        document.getElementById("main").setAttribute("style","width: 100%; max-width: 100%;");
+    });
 </script>
