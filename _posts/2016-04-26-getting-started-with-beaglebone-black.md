@@ -11,7 +11,7 @@ tags: [Programming, Development, Tutorial]
 ---
 **<u>You will need</u>** - A BeagleBone Black AM335x (an older version should also do.), a PC (I have used a Linux distribution), Ethernet Cables and Ports <i>and lots of patience.</i>
 ![The BeagleBone Black]({{page.assets_dir}}/bbb.jpg)
-The BeagleBone Black is an embedded development board, just like the <a href="www.raspberrypi.org">Raspberry Pi</a>, <a href="https://www.arduino.cc/en/ArduinoCertified/IntelGalileo">Intel Galileo</a> etc. It offers several advantages over the others in the category, and also has its own demerits. We'll get to that in the end. <br>
+The BeagleBone Black is an embedded development board, just like the <a href="http://www.raspberrypi.org">Raspberry Pi</a>, <a href="https://www.arduino.cc/en/ArduinoCertified/IntelGalileo">Intel Galileo</a> etc. It offers several advantages over the others in the category, and also has its own demerits. We'll get to that in the end. <br>
 For the specs, the BBB has a 1Ghz ARM Cortex-A8 and 512MB of DDR3 RAM on board - almost as capable as a medium range smartphone. It houses an on-board 8-bit 4GB flash memory which comes preloaded with the *Angstrom*. It has a total of 92 pins, of which 66 can be used as GPIO pins. For more specification, you may refer <a href="http://beagleboard.org/support/bone101">here</a>.
 <br>
 
@@ -19,7 +19,7 @@ Getting Started
 --------------
 The BeagleBone is amazingly simple to start off with, and is indeed the most convenient of any embedded board, since it comes with a preloaded OS. There are multiple ways to access the BBB from your system, each of which will be described briefly.
 
-Connect the BBB via the USB cable provided in the box. The BBB can be directly accessed using the web browser, and programs can be executed using Bonescript, which is similar to JS. By default, your BBB comes with it's IP address on *usb0* port as <a href="192.168.7.2">`192.168.7.2`</a>. Enter this in your browser, and you are good to go. You can access the GPIO, and run programs with the BBB as your microcontroller, just like you run scripts in Arduino. A sample of the available functions can be seen <a href="http://beagleboard.org/support/bone101">here</a>.
+Connect the BBB via the USB cable provided in the box. The BBB can be directly accessed using the web browser, and programs can be executed using Bonescript, which is similar to JS. By default, your BBB comes with it's IP address on *usb0* port as `192.168.7.2`. Enter this in your browser, and you are good to go. You can access the GPIO, and run programs with the BBB as your microcontroller, just like you run scripts in Arduino. A sample of the available functions can be seen <a href="http://beagleboard.org/support/bone101">here</a>.
 
 For accessing the *real capabilities of the board* as a computer in itself, you will need to do a little more, but fear not! Plug in the BBB using the USB cable, and go to your *terminal* (Windows users may have to use <a href="http://www.putty.org/">PuTTY</a>) and type:
 
