@@ -12,11 +12,11 @@ tags: [Algorithms, Mean Shift Algorithm]
 **<u>Pre-requisites</u>** - Basic idea of matrices(wrt pixels), a <a href="https://en.wikipedia.org/wiki/Kernel_(image_processing)">kernel or convolution matrix</a>, local binary patterns, high-school statistics principles and *enthu*!
 ![Original Image]({{page.assets_dir}}/demo_org.png) ![Image after using the algorithm]({{page.assets_dir}}/demo_4.png) <br />
 One of the most common and important applications of Image Processing remains *Edge-Detection*. The 'algorithm' followed for <a href="https://en.wikipedia.org/wiki/Canny_edge_detector">Canny-edge Detection</a> is as follows:
-	*	Apply a suitable filter to smooth the image in order to remove the noise
-	*	Find the intensity gradients of the image
-	*	Apply non-maximum suppression to get rid of spurious response to edge detection
-	*	Apply double threshold to determine potential edges
-	*	Track edge by hysteresis: Finalize the detection of edges by suppressing all the other edges that are weak and not connected to strong edges
+ * Apply a suitable filter to smooth the image in order to remove the noise
+ * Find the intensity gradients of the image
+ * Apply non-maximum suppression to get rid of spurious response to edge detection
+ * Apply double threshold to determine potential edges
+ * Track edge by hysteresis: Finalize the detection of edges by suppressing all the other edges that are weak and not connected to strong edges
 
 As you can see, the most very first step involves filtering and removal of the noise. <br />
 **WHAT IS THIS *NOISE*?**
@@ -33,9 +33,9 @@ Here, *g* refers to the Kernel operation applied on each element Xi, where X is 
 The Algorithm
 --------------
 Now, coming to the real application part of the algorithm, this method involves applying a suitable convulation matrix to the image matrix to smoothen out the edges. This matrix can be of various types, and optimised for better results. Some simple types include:
-1.	Flat Kernel (linear)
-2.	Gaussian Kernel (exponential)
-3.	Epanechikov Kernel (quadratic)
+ 1. Flat Kernel (linear)
+ 2. Gaussian Kernel (exponential)
+ 3. Epanechikov Kernel (quadratic)
 
 The simplest of these is the Flat Kernel, in which the pixel's value is changed to the averaged value of it's surroundings, with equal weight to each pixel. ![Flat Kernel]({{page.assets_dir}}/flat_kernel.png)
 
@@ -54,8 +54,8 @@ A sample code for this algorithm, implemented in 'MATLAB',  is as follows:
 
 Here, V is the image matrix of 'nx X ny' and Vt is a dummy matrix of same size, used during the loop. The filter can be changed by altering the line marked as *Kernel Definition*.
 Basically, the algorithm can be used to merge modes and generate clusters.
-* *Modes*- Modes refer to the peaks in color intensities in the pixel map. When plotted, these are the peaks in '3D-plot'.
-* *Clusters*- Clusters refer to the groups of similarly defined pixels, ie, groups with similar color or compositon.
+ * *Modes*- Modes refer to the peaks in color intensities in the pixel map. When plotted, these are the peaks in '3D-plot'.
+ * *Clusters*- Clusters refer to the groups of similarly defined pixels, ie, groups with similar color or compositon.
 As you can see in the images below, as the number of iterations increase, modes get merged and a cluser is formed.
 
 **THE PARAMETERS:** The alterable parameters include:
