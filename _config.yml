@@ -53,12 +53,20 @@ navbar_list:
     link: /blog/categories
   - name: Tags
     link: /blog/tags
+- name: Tutorials
+  link: /tutorials
 - name: About
   link: /about
 - name: Projects
   link: /projects/
 - name: Chat
   link: /gitter/
+
+# Declaring tutorials collection
+collections:
+  tutorials:
+    permalink: /tutorials/:year/:month/:title/
+    output: true
 
 # Configuration for bootstrap and color theme
 # `bootstrap`:

@@ -1,15 +1,15 @@
 {% capture tmp %}
-{% if post.excerpt and post.excerpt != '' %}
-	{% capture truncated %}<p>{{ post.excerpt }}</p>{% endcapture %}
+{% if include.id.excerpt and include.id.excerpt != '' %}
+	{% capture truncated %}<p>{{ include.id.excerpt }}</p>{% endcapture %}
 {% elsif site.safe %}
-	{% if post.content contains '<!--more-->' %}
-		{% capture truncated %}{{ post.content | remove:'-->' }}-->{% endcapture %}
+	{% if include.id.content contains '<!--more-->' %}
+		{% capture truncated %}{{ include.id.content | remove:'-->' }}-->{% endcapture %}
 	{% else %}
 		{% assign  _a = site.truncate_len %}
 		{% capture _b %}{{ _a | minus:1 }}{% endcapture %}
 		{% capture _c %}{{ _b | minus:1 }}{% endcapture %}
 
-		{% capture _x %}{{ post.content | strip_html | truncate: _a, "" }}{% endcapture %}
+		{% capture _x %}{{ include.id.content | strip_html | truncate: _a, "" }}{% endcapture %}
 		{% capture _y %}{{ _x | truncate: _b, "" }}{% endcapture %}
 		{% capture _z %}{{ _y | truncate: _c, "" }}{% endcapture %}
 
@@ -25,5 +25,5 @@
 		{% endif %}
 	{% endif %}
 {% else %}
-	{% capture truncated %}{{ post.content | postmorefilter }}{% endcapture %}
+	{% capture truncated %}{{ include.id.content | postmorefilter }}{% endcapture %}
 {% endif %}{% endcapture %}{% assign tmp = nil %}{{ truncated }}

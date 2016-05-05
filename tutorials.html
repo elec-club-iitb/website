@@ -1,0 +1,49 @@
+---
+layout: default
+group: Tutorials
+title: Tutorials
+---
+{% include libs/truncate_start %}
+{% for tut in site.tutorials %}
+	{% if forloop.first %}
+		<article class="hero-unit">
+			<header>
+				<hgroup>
+					<h1>
+						<a href="{{ site.baseurl }}{{ tut.url }}">{{ tut.title }}</a>
+					</h1>
+					<h4>
+						<time datetime="{{ tut.date | date_to_xmlschema }}">{{ tut.date | date: site.date_format }}</time> - {{ tut.author }}
+					</h4>
+				</hgroup></header>
+				<div class="content">
+					{% include libs/thumbnail %}
+					{% include libs/truncate_exec id=tut %}
+				</div>
+				<footer>
+					<p><a href="{{ site.baseurl }}{{ tut.url }}" class="btn btn-primary btn-large">Read this &raquo;</a></p>
+				</footer>
+		</article>
+	{% else %}
+		<article class="span 12 ">
+			<header>
+				{% include libs/thumbnail %}
+				<hgroup>
+					<h2>
+						<a href="{{ site.baseurl }}{{ tut.url }}">{{ tut.title }}</a>
+					</h2>
+					<h5>
+                    	<time datetime="{{ tut.date | date_to_xmlschema }}">{{ tut.date | date: site.date_format }}</time>
+					</h5>
+				</hgroup>
+			</header>
+			<div class="content">
+				{% include libs/truncate_exec id=tut %}
+			</div>
+			<footer>
+				<p><a href="{{ site.baseurl }}{{ tut.url }}" class="btn">Read this &raquo;</a></p>
+			</footer>
+		</article>
+	{% endif %}
+{% endfor %}
+{% include libs/truncate_end %}

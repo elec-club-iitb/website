@@ -16,8 +16,7 @@ title: Blog
 					</h4>
 				</hgroup></header>
 				<div class="content">
-					{% include libs/thumbnail %}
-					{% include libs/truncate_exec %}
+					{% include libs/thumbnail %}{% include libs/truncate_exec id=post %}
 				</div>
 				<footer>
 					<p><a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-primary btn-large">Read this &raquo;</a></p>
@@ -45,7 +44,7 @@ title: Blog
 						</hgroup>
 					</header>
 					<div class="content">
-						{% include libs/truncate_exec %}
+						{% include libs/truncate_exec id=post %}
 					</div>
 					<footer>
 						<p><a href="{{ site.baseurl }}{{ post.url }}" class="btn">Read this &raquo;</a></p>
