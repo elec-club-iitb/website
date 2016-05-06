@@ -13,7 +13,7 @@ title: Tutorials
 						<a href="{{ site.baseurl }}{{ tut.url }}">{{ tut.title }}</a>
 					</h1>
 					<h4>
-						<time datetime="{{ tut.date | date_to_xmlschema }}">{{ tut.date | date: site.date_format }}</time> - {{ tut.author }}
+						{{ tut.author }}
 					</h4>
 				</hgroup></header>
 				<div class="content">
@@ -33,7 +33,7 @@ title: Tutorials
 						<a href="{{ site.baseurl }}{{ tut.url }}">{{ tut.title }}</a>
 					</h2>
 					<h5>
-                    	<time datetime="{{ tut.date | date_to_xmlschema }}">{{ tut.date | date: site.date_format }}</time>
+                    	{{ tut.author }}
 					</h5>
 				</hgroup>
 			</header>
