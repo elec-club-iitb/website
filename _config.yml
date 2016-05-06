@@ -65,7 +65,7 @@ navbar_list:
 # Declaring tutorials collection
 collections:
   tutorials:
-    permalink: /tutorials/:title/
+    permalink: /tutorials/:path/
     output: true
 
 # Configuration for bootstrap and color theme
