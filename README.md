@@ -62,7 +62,6 @@ Content of the file should include this Front Matter on top:
     layout: post
     comments: true
 
-    assets_dir: /assets/first-post
     title: First Post
     excerpt: Small description for main page
     author: Your Name
@@ -78,10 +77,10 @@ Change the `title`, `excerpt`, `author`, `category` and `tags` field appropriate
 
 There is no need to add title or date in the content, they will be added automatically.
 
-If you want to add images and/or other files, put them in a folder named `/assets/<title>`, eg. something like `/assets/first-post`. Make sure to add this folder name to `assets_dir` field like shown in the example. Then when linking to the images/files write the link in this format `{{page.assets_dir}}/image.jpg}}`. A markdown example would be: 
+If you want to add images and/or other files, put them in a folder named `/assets/blog/<title>`, eg. something like `/assets/blog/first-post`. A markdown example would be: 
 
-    [This is a pdf]({{page.assets_dir}}/file.pdf)
-    ![This is an image]({{page.assets_dir}}/image.jpg)
+    [This is a pdf](file.pdf)
+    ![This is an image](image.jpg)
 
 So just fork, add a post and send a PR, or just push it directly here if you have access!
 
