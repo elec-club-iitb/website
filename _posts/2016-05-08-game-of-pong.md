@@ -7,8 +7,6 @@ excerpt: Making the classic 'Pong' Game using concept of Shift Registers
 author: Krishna Subramani
 category: [Electronics, Robotics]
 tags: [Arduino, Shift Registers]
-
-assets_dir: /assets/game-of-pong
 ---
 
 What is the best time for lukha? After the mid-sem or end-sem
@@ -21,7 +19,7 @@ chose to make a 7\*5 LED array(matrix) for our screen.
 
 The Circuit Diagram for the Screen :
 
-![LED Array]({{ page.assets_dir }}/image08.gif)
+![LED Array](image08.gif)
 
 To check whether the LED matrix was working properly, we tried to make a
 scrolling LED display(Like the one in a Railway Station).
@@ -68,17 +66,17 @@ output of one flip-flop is connected to the input of the next one.
 
 #### Pin Layout and Function Table : (IC is 74HC595)
 
-![IC Connections 1]({{ page.assets_dir }}/image04.png)
-![IC Connections 2]({{ page.assets_dir }}/image09.png)
+![IC Connections 1](image04.png)
+![IC Connections 2](image09.png)
 
 
 #### Circuit Diagram :
 
-![Update Circuit]({{ page.assets_dir }}/image02.png)
+![Update Circuit](image02.png)
 
 #### Arduino Connection Diagram :
 
-![Arduino Connections]({{ page.assets_dir }}/image06.png)
+![Arduino Connections](image06.png)
 
 #### This is how the IC works :
 

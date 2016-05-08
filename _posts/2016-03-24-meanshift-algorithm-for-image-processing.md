@@ -2,7 +2,6 @@
 layout: post
 comments: true
 
-assets_dir: /assets/meanshift-algorithm-for-image-processing
 title: Meanshift Algorithm for Image Processing
 excerpt: A very basic, yet essential, algorithm for removing noise and forming Clusters in an image.
 author: Dhruv Ilesh Shah
@@ -10,7 +9,7 @@ category: [Image Processing, Robotics]
 tags: [Algorithms, Mean Shift Algorithm]
 ---
 **<u>Pre-requisites</u>** - Basic idea of matrices(wrt pixels), a <a href="https://en.wikipedia.org/wiki/Kernel_(image_processing)">kernel or convolution matrix</a>, local binary patterns, high-school statistics principles and *enthu*!
-![Original Image]({{page.assets_dir}}/demo_org.png) ![Image after using the algorithm]({{page.assets_dir}}/demo_4.png) <br />
+![Original Image](demo_org.png) ![Image after using the algorithm](demo_4.png) <br />
 One of the most common and important applications of Image Processing remains *Edge-Detection*. The 'algorithm' followed for <a href="https://en.wikipedia.org/wiki/Canny_edge_detector">Canny-edge Detection</a> is as follows:
 
  - Apply a suitable filter to smooth the image in order to remove the noise
@@ -27,7 +26,7 @@ The Statistics
 ---------------
 The algorithm, in simple words, involves replacing each pixel definition with one obtained by applying the kernel on it - in general, forming a sort of mean application - which is similar to averaging out and minimising the noise.
 
-![Meanshift Principle]({{page.assets_dir}}/meanshift_fx.png)
+![Meanshift Principle](meanshift_fx.png)
 
 Here, *g* refers to the Kernel operation applied on each element Xi, where X is an assumed mean and *h* is a parameter called <u>resolution</u>. The obtained expression m(x) is referred to as the Mean Shift, on following this procedure for a large number of times, this m(x) converges to zero. We wish to minimise this m(x), without losing much information, so that further techniques of gradient can be applied for edge-detection. This is similar to <a href="http://mathworld.wolfram.com/JacobiMethod.html">Jacobi's Method</a> of iteration.
 
@@ -39,7 +38,7 @@ Now, coming to the real application part of the algorithm, this method involves 
  2. Gaussian Kernel (exponential)
  3. Epanechikov Kernel (quadratic)
 
-The simplest of these is the Flat Kernel, in which the pixel's value is changed to the averaged value of it's surroundings, with equal weight to each pixel. ![Flat Kernel]({{page.assets_dir}}/flat_kernel.png)
+The simplest of these is the Flat Kernel, in which the pixel's value is changed to the averaged value of it's surroundings, with equal weight to each pixel. ![Flat Kernel](flat_kernel.png)
 
 A sample code for this algorithm, implemented in 'MATLAB',  is as follows:
 {% highlight matlab %}
@@ -64,10 +63,10 @@ As you can see in the images below, as the number of iterations increase, modes 
 
 **THE PARAMETERS:** The alterable parameters include:
 *'it' or the number of iterations. Increasing 'it' would increase the merge rate, but also increase the computational cost as number of iterations would increase. Hence, there is an optimised upper bound for this value.
-![Original Image - 2 modes]({{page.assets_dir}}/Meanshift0.jpg) ![100 Iterations]({{page.assets_dir}}/Meanshift100.jpg) ![500 Iterations]({{page.assets_dir}}/Meanshift500.jpg)
+![Original Image - 2 modes](Meanshift0.jpg) ![100 Iterations](Meanshift100.jpg) ![500 Iterations](Meanshift500.jpg)
 
 *'h' or resolution is a parameter used in the statistical definition. Since it is in the denominator, it can play a huge role in the smoothening effect as shown. In general, a large 'h' would mean faster convergence, larger clusters and more loss of information. This value can be tweaked as desired, for optimal results.
-![Original Image]({{page.assets_dir}}/meanshift_H_org.png) ![h = 6]({{page.assets_dir}}/meanshift_H_6.png) ![h = 16]({{page.assets_dir}}/meanshift_H_16.png)
+![Original Image](meanshift_H_org.png) ![h = 6](meanshift_H_6.png) ![h = 16](meanshift_H_16.png)
 
 For more such example, you can refer to <a href="https://www.inf.tu-dresden.de/content/institutes/ki/is/VORTRAG/Vortrag_Huong_Nguyen.pdf">this PDF</a>.
 

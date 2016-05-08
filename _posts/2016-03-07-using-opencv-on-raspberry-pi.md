@@ -7,12 +7,10 @@ excerpt: Getting OpenCV installed and running on Rpi, with necessary scripts and
 author: Riddhish Bhalodia
 category: [Electronics, Robotics]
 tags: [Raspberry Pi, OpenCV]
-
-assets_dir: /assets/using-opencv-on-raspberry-pi
 ---
 
 
-![raspberry pi logo]({{page.assets_dir}}/rpi.jpeg)
+![raspberry pi logo](rpi.jpeg)
 
 Raspberry Pi is slowly finding a lot of applications related to image processing. I am going to provide a little overview of how one can get OpenCV up and running on your pi. I will be using tightVNC server for getting the display.
 
@@ -43,10 +41,10 @@ Here, rpi_ip is the static IP which you would have set for your pi. You will be 
 
 **<u>Step Four</u>**
 
-Now all you need is to get opencv installed on your rpi. To get that done just follow the steps which you will use to install opencv in normal ubuntu based system, if you are comfortable with it then this tutorial stops here for you.For OpenCV installation Just follow the steps listed [here(OpenCV installation on Ubuntu).]({{page.assets_dir}}/opencv installation.pdf)  
+Now all you need is to get opencv installed on your rpi. To get that done just follow the steps which you will use to install opencv in normal ubuntu based system, if you are comfortable with it then this tutorial stops here for you.For OpenCV installation Just follow the steps listed [here(OpenCV installation on Ubuntu).](opencv installation.pdf)  
 You will also need two scripts in above installation the opencv installation. Get them from here:  
-[opencv2_4_6_1.sh]({{page.assets_dir}}/opencv2_4_6_1.sh)  
-[new]({{page.assets_dir}}/new)
+[opencv2_4_6_1.sh](opencv2_4_6_1.sh)  
+[new](new)
 
 **Thank You!**  
 

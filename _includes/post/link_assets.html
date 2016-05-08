@@ -1,0 +1,22 @@
+<script>
+    post = document.getElementById("post-content");
+    imgs = post.getElementsByTagName("img");
+    links = post.getElementsByTagName("a");
+
+    for(var i=0; i<imgs.length; i++){ 
+        link = imgs[i].getAttribute("src");
+        if(link[0] != '/' && link.substr(4) != "http"){
+            link = "/assets/blog/{{ page.title | slugify }}/" + link;
+            imgs[i].setAttribute("src",link);
+        }
+    }
+
+    console.log(links)
+    for(var i=0; i<links.length; i++){ 
+        link = links[i].getAttribute("href");
+        if(link[0] != '/' && link.substr(0,4) != "http"){
+            link = "/assets/blog/{{ page.title | slugify }}/" + link;
+            links[i].setAttribute("href",link);
+        }
+    }
+</script>

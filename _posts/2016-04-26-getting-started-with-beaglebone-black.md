@@ -2,7 +2,6 @@
 layout: post
 comments: true
 
-assets_dir: /assets/getting-started-with-beaglebone-black
 title: Getting Started with Beaglebone Black
 excerpt: Simple tutorial on using the BBB.
 author: Dhruv Ilesh Shah
@@ -10,7 +9,7 @@ category: [Embedded Development]
 tags: [Programming, Development, Tutorial]
 ---
 **<u>You will need</u>** - A BeagleBone Black AM335x (an older version should also do.), a PC (I have used a Linux distribution), Ethernet Cables and Ports <i>and lots of patience.</i>
-![The BeagleBone Black]({{page.assets_dir}}/bbb.jpg)
+![The BeagleBone Black](bbb.jpg)
 The BeagleBone Black is an embedded development board, just like the <a href="http://www.raspberrypi.org">Raspberry Pi</a>, <a href="https://www.arduino.cc/en/ArduinoCertified/IntelGalileo">Intel Galileo</a> etc. It offers several advantages over the others in the category, and also has its own demerits. We'll get to that in the end. <br>
 For the specs, the BBB has a 1Ghz ARM Cortex-A8 and 512MB of DDR3 RAM on board - almost as capable as a medium range smartphone. It houses an on-board 8-bit 4GB flash memory which comes preloaded with the *Angstrom*. It has a total of 92 pins, of which 66 can be used as GPIO pins. For more specification, you may refer <a href="http://beagleboard.org/support/bone101">here</a>.
 <br>

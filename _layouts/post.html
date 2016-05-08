@@ -12,7 +12,7 @@ group: Blog
 						<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time>
 					</p>
 				</header>
-				<div class="content">
+				<div class="content" id="post-content">
 {{ content }}
 				</div>
 				<footer>
@@ -23,3 +23,4 @@ group: Blog
 			</article>
 {% include post/post_pagenation.html %}
 {% include post/comment.html %}
+{% include post/link_assets.html %}

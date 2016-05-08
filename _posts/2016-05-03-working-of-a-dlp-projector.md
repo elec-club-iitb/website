@@ -2,13 +2,11 @@
 layout: post
 comments: true
 
-title: Working of a Digital Light Processing Projector
+title: Working of a DLP Projector
 excerpt: Describing the internals and working mechanism, as found in the How Things Work session
 author: Pranav Sankhe
 category: [Electronics, Optics]
 tags: [Light Processing]
-
-assets_dir: /assets/working-of-a-dlp-projector
 ---
 
 The Robotics Club in association of The Electronics Club of IIT Bombay conducts regular sessions named “How Things Work?” where we open up a device used in everyday life and try to understand how it works.
@@ -21,14 +19,14 @@ Introduction
 Digital light processing is a display device based on optical micro-electro-mechanical technology. In simple words, it is the device which is used inside the projectors used for showing films in theatres. It was originally developed in 1987 by Dr.Larry Hornbeck of Texas Instruments. While the DLP imaging device was invented by Texas Instruments, the first DLP-based projector was introduced by Digital Projection Ltd in 1997
 
 <br>
-![Components]({{ page.assets_dir }}/image_0.jpg)
+![Components](image_0.jpg)
 
 <br>
 
 Components
 ----------
 
-![diagram]({{ page.assets_dir }}/image_1.jpg)
+![diagram](image_1.jpg)
 
 - **Lamp**
 - **Condensing lens**
@@ -57,7 +55,7 @@ Working of the DMD chip
 The working mechanisms of a DMD chip is a very interesting combination of application of mechanical, electrical and optical engineering.
 
 <br>
-![DMD chip]({{ page.assets_dir }}/image_2.jpg)
+![DMD chip](image_2.jpg)
 
 <br>
 The DMD chip has millions of small mirrors. Before any of the mirrors in the DMD chip switch to their on or off positions, the chip will rapidly decode a bit-streamed image code that enters through the semiconductor. It then converts the data from interlaced to progressive, allowing the picture to fade in. Next, the chip sizes the picture to fit the screen and makes any necessary adjustments to the picture, including brightness, sharpness and colour quality. Finally, it relays all the information to the mirrors, completing the whole process in just 16 microseconds.
