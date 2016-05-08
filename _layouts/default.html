@@ -38,5 +38,39 @@ layout: nil
 </footer>
 {% unless site.asides.themes %}{% include script.html %}{% endunless %}
 {% include bottom.html %}
+<a href="#" class="go-top" style="
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	text-decoration: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 12px;
+	padding: 1em;
+	display: none;
+
+.	go-top:hover {
+	background-color: rgba(0, 0, 0, 0.6);"}>
+	Go Top
+</a>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">$(document).ready(function() {
+			// Show or hide the sticky footer button
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 200) {
+					$('.go-top').fadeIn(200);
+				} else {
+					$('.go-top').fadeOut(200);
+				}
+			});
+			
+			// Animate the scroll to top
+			$('.go-top').click(function(event) {
+				event.preventDefault();
+				
+				$('html, body').animate({scrollTop: 0}, 300);
+			})
+		});
+</script>
 </body>
 </html>
