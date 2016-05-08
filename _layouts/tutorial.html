@@ -3,41 +3,57 @@ layout: default
 group: Tutorials
 ---
 <article class="single post">
-	<header>
-		<h1>
-			<a href="{{ site.baseurl }}{{ page.url }}" rel="bookmark" title="Permanent link">{{ page.title }}</a>
-		</h1>
-		<h6>
-			Last updated: {{ page.last_updated | date: site.date_format }}
-		</h6>
-	</header>
-	<div class="content" style="padding: 1.5em">
-    	{{ content }}
-	</div>
-    <h3>Contents:</h3>
-	<div class="content index" style="padding: 1.5em; font-size: 1.5em; background-color: #f6f6f6;" >
+    <header>
+        <h1>
+            <a href="{{ site.baseurl }}{{ page.url }}" rel="bookmark" title="Permanent link">{{ page.title }}</a>
+        </h1>
+        <h6>
+            Last updated: {{ page.last_updated | date: site.date_format }}
+        </h6>
+    </header>
+    <div class="content" style="padding: 1.5em">
+        {{ content }}
+    </div>
+    <h2>Contents:</h2>
+    <div class="content index" style="padding: 1.5em; font-size: 1.5em; background-color: #f6f6f6;" >
         {% include libs/thumbnail %}
-		<ul class="content-list">
-		{% for tut in site.tutorials %}
+        <ul class="content-list" type="none">
+        {% for tut in site.tutorials %}
             {% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
             {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
                 {% if filename != "index.md" and page.topic_folder == tutname %}
-                <li><a href="#{{ filename|remove:".md" }}">{{ tut.title }}</a></li>
+                {% capture tutindex %}{{ filename | split:"-" | first }}{% endcapture %}
+                {% capture filename %}{{ filename | split:"-" | last }}{% endcapture %}
+                <li>
+                    <a href="#{{ filename|remove:".md" }}">{{ tutindex}}: {{ tut.title }}</a>
+                    {% if tut.sections %}
+                    <ul class="content-sublist" type="none">
+                        {% for section in tut.sections %}
+                            <li>
+                                <a href="#{{ section.href }}">
+                                    {{tutindex}}.{{forloop.index}}: {{section.name}}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
                 {% endif %}
-		{% endfor %}
-		</ul>
-	</div>
-	{% for tut in site.tutorials %}
-            {% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
-            {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
-                {% if filename != "index.md" and page.topic_folder == tutname %}
-        		<div id="{{ filename|remove:".md" }}">
-        			<h3>{{ tut.title }}</h3>
-        			<p>
-        			{{ tut.content }}
-        			</p>
-        		</div>
-        		<hr>
-    			{% endif %}
-	{% endfor %}
+        {% endfor %}
+        </ul>
+    </div>
+    <hr>
+    {% for tut in site.tutorials %}
+        {% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
+        {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
+            {% if filename != "index.md" and page.topic_folder == tutname %}
+            <div id="{{ filename | split:"-" | last | remove:".md" }}">
+                <h3>{{ tut.title }}</h3>
+                <p>
+                {{ tut.content }}
+                </p>
+            </div>
+            <hr>
+        {% endif %}
+    {% endfor %}
 </article>
