@@ -1,5 +1,6 @@
 ---
-
+layout: default
+title: Setup
 ---
 
 Hello setup avr

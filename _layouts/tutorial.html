@@ -7,30 +7,30 @@ group: Tutorials
 		<h1>
 			<a href="{{ site.baseurl }}{{ page.url }}" rel="bookmark" title="Permanent link">{{ page.title }}</a>
 		</h1>
-		<h4>
+		<h6>
 			Last updated: {{ page.last_updated | date: site.date_format }}
-		</h4>
+		</h6>
 	</header>
 	<div class="content" style="padding: 1.5em">
     	{{ content }}
 	</div>
+    <h3>Contents:</h3>
 	<div class="content index" style="padding: 1.5em; font-size: 1.5em; background-color: #f6f6f6;" >
         {% include libs/thumbnail %}
-		<ol>
+		<ul class="content-list">
 		{% for tut in site.tutorials %}
-    		{% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
-		    {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
-    			{% if filename != "index.md" and page.topic_folder == tutname %}
-        		<li><a href="#{{ filename|remove:".md" }}">{{ tut.title }}</a>
-	        	</li>
-    			{% endif %}
+            {% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
+            {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
+                {% if filename != "index.md" and page.topic_folder == tutname %}
+                <li><a href="#{{ filename|remove:".md" }}">{{ tut.title }}</a></li>
+                {% endif %}
 		{% endfor %}
-		</ol>
+		</ul>
 	</div>
 	{% for tut in site.tutorials %}
-    		{% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
-		    {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
-    			{% if filename != "index.md" and page.topic_folder == tutname %}
+            {% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
+            {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
+                {% if filename != "index.md" and page.topic_folder == tutname %}
         		<div id="{{ filename|remove:".md" }}">
         			<h3>{{ tut.title }}</h3>
         			<p>
