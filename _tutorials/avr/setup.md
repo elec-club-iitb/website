@@ -2,7 +2,7 @@
 
 ---
 
-Hello installation avr
+Hello setup avr
 
 <br>test
 <br>test

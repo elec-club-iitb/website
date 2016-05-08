@@ -2,7 +2,7 @@
 
 ---
 
-Hello installation avr
+Hello installation arduino
 
 <br>test
 <br>test
