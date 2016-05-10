@@ -15,8 +15,8 @@ markdown: kramdown
 highlighter: rouge
 syntaxtheme: friendly
 paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-gems: ['jekyll-paginate']
+exclude: ["scripts", "README.md"]
+gems: ['jekyll-paginate', 'jekyll-sass-converter']
 
 # Configuration for url/path
 baseurl:
