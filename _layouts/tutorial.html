@@ -1,26 +1,35 @@
 ---
 layout: default
-group: Tutorials
 ---
-<article class="single post">
-    <header>
-        <h1>
-            <a href="{{ site.baseurl }}{{ page.url }}" rel="bookmark" title="Permanent link">{{ page.title }}</a>
-        </h1>
-        <h6>
-            Last updated: {{ page.last_updated | date: site.date_format }}
-        </h6>
-    </header>
-    <div class="content" style="padding: 1.5em">
-        {{ content }}
+<!-- Post Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.excerpt %}
+                    <h3 class="subheading">{{ page.excerpt }}</h3>
+                    {% endif %}
+                    <span class="meta">Last updated: {{ page.last_updated | date: site.date_format }}</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <h2>Contents:</h2>
-    <div class="content index" style="padding: 1.5em; font-size: 1.5em; background-color: #f6f6f6;" >
-        {% include libs/thumbnail %}
-        <ul class="content-list" type="none">
-        {% for tut in site.tutorials %}
-            {% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
-            {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
+</header>
+
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {{ content }}
+                <hr>
+                <h2>Contents:</h2>
+                <div class="content index" style="padding: 1.5em; font-size: 1.5em; background-color: #f6f6f6;" >
+                <ul class="content-list" type="none">
+                {% for tut in site.tutorials %}
+                {% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
+                {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
                 {% if filename != "index.md" and page.topic_folder == tutname %}
                 {% capture tutindex %}{{ filename | split:"-" | first }}{% endcapture %}
                 {% capture filename %}{{ filename | split:"-" | last }}{% endcapture %}
@@ -39,21 +48,29 @@ group: Tutorials
                     {% endif %}
                 </li>
                 {% endif %}
-        {% endfor %}
-        </ul>
-    </div>
-    <hr>
-    {% for tut in site.tutorials %}
-        {% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
-        {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
-            {% if filename != "index.md" and page.topic_folder == tutname %}
-            <div id="{{ filename | split:"-" | last | remove:".md" }}">
+                {% endfor %}
+                </ul>
+                </div>
+                <hr>
+                {% for tut in site.tutorials %}
+                {% capture tutname %}{{ tut.path | remove:"_tutorials/" | split:"/" | first }}{% endcapture %}
+                {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
+                {% if filename != "index.md" and page.topic_folder == tutname %}
+                <div id="{{ filename | split:"-" | last | remove:".md" }}">
                 <h3>{{ tut.title }}</h3>
                 <p>
                 {{ tut.content }}
                 </p>
+                </div>
+                <hr>
+                {% endif %}
+                {% endfor %}
+                
+                <div id="disqus_thread"></div>
+
+                <hr>
+
             </div>
-            <hr>
-        {% endif %}
-    {% endfor %}
+        </div>
+    </div>
 </article>

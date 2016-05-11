@@ -1,48 +1,36 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
 
-<title>{% if page.title and page.title != '' %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta name="author" content="{{ site.author }}">
-<link rel="canonical" href="{{ site.url }}{{ page.url }}">
-{% if site.feedburner %}
-<link rel="alternate" href="http://feeds.feedburner.com/{{ site.feedburner.id }}" title="{{ site.title }}" type="application/atom+xml">
-{% else %}
-<link rel="alternate" href="{{ site.baseurl }}/atom.xml" type="application/atom+xml" title="{{ site.title }}">
-<link rel="alternate" href="{{ site.baseurl }}/rss.xml" type="application/rss+xml" title="{{ site.title }}">
-{% endif %}
-<!-- Le styles -->
-{% case site.bootstrap %}
-	{% when 'custom' %}
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap-{{ site.bootstrap_ver }}/css/bootstrap.custom.css" id="bootstrap-theme">
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap-{{ site.bootstrap_ver }}/css/bootstrap-responsive.custom.css">
-	{% when 'original' %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{ site.bootstrap_ver }}/css/bootstrap.min.css" id="bootstrap-theme">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{ site.bootstrap_ver }}/css/bootstrap-responsive.min.css">
-	{% else %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/{{ site.bootswatch_ver }}/{{ site.bootstrap }}/bootstrap.min.css" id="bootstrap-theme">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/{{ site.bootstrap_ver }}/css/bootstrap-responsive.min.css">
-{% endcase %}
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
 
-<!-- Le syntax-highlighting -->
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/highlight/{{ site.syntaxtheme }}.css">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-<!--[if IE 7]>
-<link href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome-ie7.css" rel="stylesheet">
-<![endif]-->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-<script src="{{ site.baseurl }}/assets/js/libs/html5shiv.js"></script>
-<![endif]-->
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
 
-<!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="{{ site.baseurl }}/assets/ico/favicon.png">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl }}/assets/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl }}/assets/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/assets/ico/apple-touch-icon-57-precomposed.png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/ico/favicon.png">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--% feed_meta %}-->
+
+</head>
