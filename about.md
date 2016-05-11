@@ -1,10 +1,9 @@
 ---
-layout: default
-group: About
-title: About Us
+layout: page
+title: "About"
+description: "This is what we do."
+header-img: "assets/img/elec-club-rocks.jpg"
 ---
-
-![Elec Club Rocks!](/assets/img/elec-club-rocks.jpg)
 
 About Us
 --------

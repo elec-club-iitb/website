@@ -1,66 +1,29 @@
-# Configuration for jekyll
-# NOTICE: GitHub forces to set `safe: true` in order to prohibit using plugins.
-safe: false
-source: .
-destination: ./_site
-plugins_dir: ./_plugins
-lsi: true
+# Site settings
+#--------------
+title: Electronics Club, IIT Bombay
+header-img: img/home-bg.jpg
+email: eciitb@gmail.com
+copyright_name: Electronics Club, IIT Bombay
+description: The electronics enthusiasts of IITB
+#twitter_username: SBootstrap
+github_username:  elec-club-iitb
+#facebook_username:  IronSummitMedia
+#email_username:  your-email@yourdomain.com
+
+# Build settings
+markdown: kramdown
 highlighter: rouge
 syntaxtheme: friendly
-markdown: kramdown
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vendor']
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 gems: ['jekyll-paginate']
 
 # Configuration for url/path
-# NOTICE:
-# * `baseurl`: Being set as absolute path is recommended.
-# * No need '/' at the end of url/path.
-# * Project page:
-#   url: http://USERNAME.github.com/REPOSITORY
-#   baseurl: /REPOSITORY
+baseurl:
 url: http://elec-club-iitb.github.io
-baseurl: 
 
-# Configuration for permalink
-# `permalink`: none, pretty or /blog/:categories/:title.html
+# Permalink
 permalink: /blog/:year/:month/:title/
-
-# Configuration for site
-title: Electronics Club, IIT Bombay
-logo: "/assets/img/elec-logo.png"
-description: The electronics enthusiasts of IITB
-author: Electronics Club, IIT Bombay
-email: eciitb@gmail.com
-
-# Configuration for blog
-lang: en
-paginate: 4
-columns: 3
-date_format: "%B %d, %Y"
-truncate_len: 200
-
-# Configuration for asides/recent_posts.html
-recent_posts: 5
-
-# Configuration for navbar.html
-navbar_list:
-- name: Blog
-  link: /
-  dropdown: &dropdown
-  - name: Archives
-    link: /blog/archives
-  - name: Categories
-    link: /blog/categories
-  - name: Tags
-    link: /blog/tags
-- name: Tutorials
-  link: /tutorials
-- name: About
-  link: /about
-- name: Projects
-  link: /projects/
-- name: Chat
-  link: /gitter/
 
 # Declaring tutorials collection
 collections:
@@ -68,57 +31,8 @@ collections:
     permalink: /tutorials/:path/
     output: true
 
-# Configuration for bootstrap and color theme
-# `bootstrap`:
-# custom, original, amelia, cerulean, cyborg, journal,
-# readable, simplex, slate, spacelab, spruce, superhero, united
-bootstrap: cerulean
-bootstrap_ver: 2.3.2
-bootswatch_ver: 2.3.2
-
-# Configuration for responsive break point when using 'custom'.
-responsive_bp: 768
-
-# Configuration for asides.html
-# CAUTION: `themes` should be false to put the script.html at the bottom.
-asides:
-    about: true
-    contact: true
-    search: false
-    themes: false
-    recent_posts: true
-    archive_tabs: true
-    tweets: false
-    github: false
-
-# Configuration for jQuery
-jquery_ver: 1.10.2
-
-#-----------------------------------
-# Configuration for 3rd party script
-#-----------------------------------
+# For comments sections
 disqus:
     short_name: eciitb
     comment_count: true
     developer_mode: true
-
-#feedburner:
-#    id: YOUR_SITE_ID
-
-google_analytics:
-    account: UA-74765045-1
-
-google_plus_one:
-    size: medium
-
-# `xfbml` will break some styles on android 2.3 native browser (Optimus L-01D).
-# `locale`: ja_JP, en_US, es_LA, fr_FR, de_DE, it_IT, zh_CN, ko_KR, ...
-facebook:
-    xfbml: true
-    locale: en_US
-
-github:
-    username: elec-club-iitb
-    count: 5
-
-#hatena: true

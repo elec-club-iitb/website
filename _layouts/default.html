@@ -1,47 +1,21 @@
----
-layout: nil
----
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="{{ site.lang }}"> <![endif]-->
-<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="{{ site.lang }}"> <![endif]-->
-<!--[if IE 8]>    <html class="lt-ie9" lang="{{ site.lang }}"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="{{ site.lang }}"> <!--<![endif]-->
-<head>
+<html lang="en">
+
 {% include head.html %}
-{% if site.asides.themes %}{% include script.html %}{% endif %}
-</head>
+
 <body>
-<header id="header">
-{% include header.html %}
-</header>
 
-<nav id="navbar">
-{% include navbar.html %}
-</nav>
+    {% include nav.html %}
 
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div id="main" class="span9">
-{{ content }}
-		</div>
+    {{ content }}
 
-		<aside id="sidebar" class="span3">
-{% include asides.html %}
-		</aside><!--/span-->
-	</div><!--/row-->
-</div> <!-- /container -->
+    {% include comments.html %}
 
-<hr>
-
-<footer id="footer">
-{% include footer.html %}
-</footer>
-{% unless site.asides.themes %}{% include script.html %}{% endunless %}
-{% include bottom.html %}
-<a href="#" class="go-top" style="
+    {% include footer.html %}
+    <a href="#" class="go-top" style="
 	position: fixed;
-	bottom: 2em;
-	right: 2em;
+	bottom: 4em;
+	right: 4em;
 	text-decoration: none;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.3);
@@ -49,10 +23,10 @@ layout: nil
 	padding: 1em;
 	display: none;
 
-.	go-top:hover {
+	.go-top:hover {
 	background-color: rgba(0, 0, 0, 0.6);"}>
 	Go Top
-</a>
+	</a>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">$(document).ready(function() {
 			// Show or hide the sticky footer button
@@ -68,9 +42,43 @@ layout: nil
 			$('.go-top').click(function(event) {
 				event.preventDefault();
 				
-				$('html, body').animate({scrollTop: 0}, 300);
+				$('html, body').animate({scrollTop: 0}, 1000);
 			})
 		});
 </script>
+<!--Smooth scroll -->
+<script type="text/javascript">
+	$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+<!--Smooth transition-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('body').css('display', 'none');
+		$('body').fadeIn(1500);
+		$('.link').click(function(event) {
+		event.preventDefault();
+		newLocation = this.href;
+		$('body').fadeOut(1000, newpage);
+	});
+	function newpage() {
+		window.location = newLocation;
+	}
+	});
+</script>
 </body>
+
 </html>
