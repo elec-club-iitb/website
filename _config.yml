@@ -31,6 +31,9 @@ collections:
   tutorials:
     permalink: /tutorials/:path/
     output: true
+  events:
+    permalink: /events/:path/
+    output: true
 
 # For comments sections
 disqus:
