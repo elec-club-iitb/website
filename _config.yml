@@ -1,7 +1,8 @@
 # Site settings
 #--------------
 title: Electronics Club, IIT Bombay
-header-img: img/home-bg.jpg
+header-img: assets/img/home-bg.jpg
+logo: assets/ico/logo.png
 email: eciitb@gmail.com
 copyright_name: Electronics Club, IIT Bombay
 description: The electronics enthusiasts of IITB
