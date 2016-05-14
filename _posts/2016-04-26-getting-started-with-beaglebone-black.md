@@ -8,6 +8,7 @@ excerpt: Simple tutorial on using the BBB.
 author: Dhruv Ilesh Shah
 category: [Embedded Development]
 tags: [Programming, Development, Tutorial]
+header-img: "assets/getting-started-with-beaglebone-black/cover.jpg"
 ---
 **<u>You will need</u>** - A BeagleBone Black AM335x (an older version should also do.), a PC (I have used a Linux distribution), Ethernet Cables and Ports <i>and lots of patience.</i>
 ![The BeagleBone Black]({{page.assets_dir}}/bbb.jpg)

@@ -8,6 +8,7 @@ excerpt: A very basic, yet essential, algorithm for removing noise and forming C
 author: Dhruv Ilesh Shah
 category: [Image Processing, Robotics]
 tags: [Algorithms, Mean Shift Algorithm]
+header-img: "assets/meanshift-algorithm-for-image-processing/cover.png"
 ---
 **<u>Pre-requisites</u>** - Basic idea of matrices(wrt pixels), a <a href="https://en.wikipedia.org/wiki/Kernel_(image_processing)">kernel or convolution matrix</a>, local binary patterns, high-school statistics principles and *enthu*!
 ![Original Image]({{page.assets_dir}}/demo_org.png) ![Image after using the algorithm]({{page.assets_dir}}/demo_4.png) <br />
