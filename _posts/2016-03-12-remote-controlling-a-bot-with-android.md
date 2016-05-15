@@ -47,20 +47,20 @@ AVR Code:
 
 Code is pretty straight forward too. Take the bit-sequence from HC-05 through UART and output it on the four pins of PORTB. I have posted the relevant `main()` function here. Entire code can be found on github.
 
-{% highlight c %}
+```c
 int main() {
     
-    USARTInit(5, 0, 1); // initialise uart to baud rate 9600, no parity , 1 stopbit
-    DDRB=0xFF;			// make all pins on port B as output
-    PORTB  = 0x00;		// initially make all pins low
-    
-    while(1){		//endless loop
-        while( !(UCSRA & (1<<RXC))) ;	// wait for data to be received in uart UDR register
-        char temp = UDR;
-        PORTB = temp;		//directly write value of uart data to port
-    }
-}
-{% endhighlight %}
+    USARTInit(5, 0, 1); // initialise uart to baud rate 9600, no parity , 1 stopbit  
+    DDRB=0xFF;			// make all pins on port B as output  
+    PORTB  = 0x00;		// initially make all pins low  
+      
+    while(1){		//endless loop  
+        while( !(UCSRA & (1<<RXC))) ;	// wait for data to be received in uart UDR register  
+        char temp = UDR;  
+        PORTB = temp;		//directly write value of uart data to port  
+    }  
+}  
+```
 
 Android App:
 ============
