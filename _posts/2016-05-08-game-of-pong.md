@@ -9,6 +9,7 @@ category: [Electronics, Robotics]
 tags: [Arduino, Shift Registers]
 
 assets_dir: /assets/game-of-pong
+header-img: assets/game-of-pong/cover.jpg
 ---
 
 What is the best time for lukha? After the mid-sem or end-sem

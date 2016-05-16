@@ -57,7 +57,7 @@ layout: default
                 {% capture filename %}{{ tut.path | remove:"_tutorials/" | split:"/" | last }}{% endcapture %}
                 {% if filename != "index.md" and page.topic_folder == tutname %}
                 <div id="{{ filename | split:"-" | last | remove:".md" }}">
-                <h3>{{ tut.title }}</h3>
+                <h2>{{ tut.title }}</h2>
                 <p>
                 {{ tut.content }}
                 </p>
