@@ -31,11 +31,42 @@ layout: default
        				 	<img src="{{ image_url }}"/>
 						-->
 					</div>
+				
 				</div>
+
+				<script>
+			                var xhttp = new XMLHttpRequest()
+        				var folder_id = "{{ page.img-folder.id }}"
+                			var url = "https://www.googleapis.com/drive/v3/files?q='" + folder_id + "'+in+parents&key=AIzaSyB2hEuWPCFBXLJXx7Sib_E_Jv2Nu5WZTdM"
+                			xhttp.open("GET", url, false);
+					xhttp.send();
+
+					var files = JSON.parse(xhttp.responseText).files
+					var slider = document.getElementById("slider");
+
+					for(var i=0; i<files.length; i++){
+					    var img = document.createElement("img")
+					    img.setAttribute("src","http://gdriv.es/{{page.img-folder.name}}/"+files[i].name)
+					    slider.appendChild(img)
+					}
+               			</script>
 
 				<hr>
 
 				<!-- iterate over reviews here -->
+				{% for event in site.events %}
+				{% capture eventname %}{{ event.path | remove:"_events/" | split:"/" | first }}{% endcapture %}
+				{% capture filename %}{{ event.path | remove:"_events/" | split:"/" | last }}{% endcapture %}
+				{% if filename != "index.md" and page.event_folder == eventname %}
+				<div id="{{ filename | split:"-" | last | remove:".md" }}">
+				<p>
+				{{ event.content }}
+				</p>
+				<h3 class="review-name">{{ event.title }}</h3>
+				</div>
+				<hr>
+				{% endif %}
+				{% endfor %}
 
 			</div>
         </div>
