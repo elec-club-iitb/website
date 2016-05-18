@@ -16,6 +16,7 @@ markdown: kramdown
 highlighter: rouge
 syntaxtheme: friendly
 paginate: 5
+paginate_path: "blog/page:num"
 exclude: ["scripts", "README.md"]
 gems: ['jekyll-paginate', 'jekyll-sass-converter']
 
@@ -25,6 +26,15 @@ url: http://elec-club-iitb.github.io
 
 # Permalink
 permalink: /blog/:year/:month/:title/
+
+# navbar menu
+nav_menu:
+    - name: Blog
+      url: "/blog"
+    - name: Tutorials
+      url: "/tutorials"
+    - name: Chat
+      url: "/chat"
 
 # Declaring tutorials collection
 collections:
