@@ -17,10 +17,19 @@ We maintain a [community blog](/blog)! Check out the latest blog post:
 
 [**{{ post.title }}**]({{ post.url | prepend: site.baseurl }}): Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
 
-We also have a [great set of tutorials](/tutorials) on AVR, Arduino and more to help you get started with tinkering! 
+We also have a [great set of tutorials]({{ site.baseurl }}/tutorials) on AVR, Arduino and more to help you get started with tinkering! 
 
 {% break %}
 {% endfor %}
+
+Club Reviews
+------------
+
+We have gotten some great feedback and reviews for our activities! Here are some.
+
+ - [Electronics Club - A Convener's Review]({{ site.baseurl }}/reviews/sudeep) - *by Sudeep Salgia*
+ - [A Freshie's Perspective]({{ site.baseurl }}/reviews/arkya) - *by Arkya Chatterjee*
+ - ["Elec Club! God Club hai!"]({{ site.baseurl }}/reviews/hrushikesh) - *by Hrushikesh Loya*
 
 Vision
 -------
