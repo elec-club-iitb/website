@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  Analogue-Digital Conversion
-assets-dir: /assets/tutorials/avr
+assets-dir: assets/tutorials/avr
 ---
 
 Microcontrollers are capable of detecting binary signals i.e is the
@@ -56,26 +56,26 @@ achieving what setting is mentioned in the code comments.
 
 #### ADSCRA
 
-![]({{ page.assets-dir }}/image12.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image12.png)
 
 #### ADMUX
 
-![]({{ page.assets-dir }}/image24.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image24.png)
 
 
 #### Selecting Input Pin
 
-![]({{ page.assets-dir }}/image10.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image10.png)
 
 
 #### Setting ADC Prescaler
 
-![]({{ page.assets-dir }}/image11.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image11.png)
 
 
 #### Reference Voltage Selection
 
-![]({{ page.assets-dir }}/image13.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image13.png)
 
 
 #### Registers for storing the digital output (available in two formats)
@@ -84,10 +84,10 @@ The result, which is a 10-bit number is stored here, and thus 8 bits
 together and two bits after/before the 8
 bits (`ADLAR`=`0`/`1`).
 
-![]({{ page.assets-dir }}/image34.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image34.png)
 
 
-![]({{ page.assets-dir }}/image25.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image25.png)
 
 
 ### Code

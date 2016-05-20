@@ -16,7 +16,7 @@ sections:
     href: tx-rx
   - name: USB Port
     href: usb
-assets-dir: /assets/tutorials/arduino
+assets-dir: assets/tutorials/arduino
 ---
 
 Arduino offers different boards, with varying microcontroller
@@ -25,7 +25,7 @@ clock speed) and number of input/output pins.
 
 Let us examine one of the simple models, Genuino.
 
-![]({{ page.assets-dir }}/image08.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image08.png)
 
 The parts, as labelled in the figure, are explained here:
 

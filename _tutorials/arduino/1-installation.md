@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Installation
-assets-dir: /assets/tutorials/arduino
+assets-dir: assets/tutorials/arduino
 ---
 
 ### Arduino comprises of 2 main parts:
@@ -36,7 +36,7 @@ upload process.
 
 Done, now the board is verified and ready to use with any custom code.
 
-![]({{ page.assets-dir }}/image06.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image06.png)
 
-![]({{ page.assets-dir }}/image07.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image07.png)
 

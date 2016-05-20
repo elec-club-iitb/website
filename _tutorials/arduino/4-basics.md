@@ -1,12 +1,12 @@
 ---
 layout: default
 title: The Iconic LED Blink
-assets-dir: /assets/tutorials/arduino
+assets-dir: assets/tutorials/arduino
 ---
 
 ### The Connections(Mentioned in Setup)
 
-![]({{ page.assets-dir }}/image10.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image10.png)
 
 This being our first time, let us look into the setup closely. Please
 read the comments of the code that follows to understand it thoroughly.

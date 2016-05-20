@@ -1,7 +1,7 @@
 ---
 comments: true
 layout: tutorial
-assets-dir: /assets/tutorials/avr
+assets-dir: assets/tutorials/avr
 permalink: /tutorials/avr/
 
 topic_folder: avr

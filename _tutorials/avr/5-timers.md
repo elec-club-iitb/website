@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Timers and Counters
-assets-dir: /assets/tutorials/avr
+assets-dir: assets/tutorials/avr
 sections:
   - name: Pre-scaling
     href: pre-scaling
@@ -47,7 +47,7 @@ The register `TCCR1A` and `TCCR1B` (Timer/Counter Control Registers) are used
 for this. Please refer the datasheet for the description of the
 registers.
 
-![]({{ page.assets-dir }}/image21.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image21.png)
 
 As you can see, all the 8-bits in the register are named.
 
@@ -79,7 +79,7 @@ time when the original uC clock reaches 142857” (Read this line twice
 Search “prescaler” and after some experience you will know where to
 look, among the numerous results you get for “prescaler” :p.
 
-![]({{ page.assets-dir }}/image31.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image31.png)
 
 In the relevant table you will find the bit combination of `CS12`/`11`/`10`
 required to set the prescaler we want. In our case: `CS12`/`11`/`10`=`0`/`1`/`1`

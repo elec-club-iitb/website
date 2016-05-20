@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Controlling Input and Output
-assets-dir: /assets/tutorials/avr
+assets-dir: assets/tutorials/avr
 sections:
   - name: Controlling Output
     href: controlling-output

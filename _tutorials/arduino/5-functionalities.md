@@ -6,7 +6,7 @@ sections:
     href: pwm
   - name: Analogue-Digital Conversion
     href: adc
-assets-dir: /assets/tutorials/arduino
+assets-dir: assets/tutorials/arduino
 ---
 
 ### Pulse Width Modulation <a name="pwm">

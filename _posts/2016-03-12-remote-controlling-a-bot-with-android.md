@@ -2,7 +2,7 @@
 layout: post
 comments: true
 
-assets_dir: /assets/remote-controlling-a-bot-with-android
+assets-dir: assets/remote-controlling-a-bot-with-android
 header-img: assets/remote-controlling-a-bot-with-android/cover.jpg
 title: Remote Controlling a bot with Android
 excerpt: How we implemented an Android+AVR based remote control for bots participating in XLR8 competition.
@@ -31,7 +31,7 @@ ATtiny Board
 Schematic:
 -----------
 
-![Schematic]({{ page.assets_dir}}/schematic.png)
+![Schematic]({{ site.baseurl }}/{{ page.assets-dir }}/schematic.png)
 
  - JP1 is where the programmer head attaches
  - JP3 is where HC-05 is attached
@@ -41,7 +41,7 @@ Connections are pretty straight forward. The RX/TX from HC-05 are joined with TX
 
 We designed a PCB with respect to this schematic. You can find the necessary Gerber files on the github repo [here](http://github.com/elec-club-iitb/xlr8-remote-control/tree/master/avr-receiver). This is how it finally looks like:
 
-![Final product]({{ page.assets_dir}}/avr_rec.jpg)
+![Final product]({{ site.baseurl }}/{{ page.assets-dir }}/avr_rec.jpg)
 
 AVR Code:
 ---------

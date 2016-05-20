@@ -8,7 +8,7 @@ author: Arunabh Ghosh
 category: [Electronics]
 tags: [555 Timer, Monostable]
 
-assets_dir: /assets/the-making-of-burglar-alarm
+assets-dir: assets/the-making-of-burglar-alarm
 ---
 
 In the First semester along with Pranav, I tried to design a burglar alarm circuit that would go off if the burglar tripped over a copper wire. We built a small scale working model of the circuit and presented it in one of the How Things Work Session which is organised by the Robotics Club in association with the Electronics Club of IIT Bombay.
@@ -31,7 +31,7 @@ How is the impulse triggered?<br />
 Here we make use of **555 timer IC**. 
 The figure shown below shows us the basic circuit.
 <br>
-![Timer-circuit]({{ page.assets_dir }}/image_0.jpg)
+![Timer-circuit]({{ site.baseurl }}/{{ page.assets-dir }}/image_0.jpg)
 
 <br>
 The main pin which is of interest to us is **PIN 2** - It turns on the output when the voltage supplied to it drops below 1/3 of Vcc.
@@ -58,7 +58,7 @@ Components Required
 
 Burglar Alarm Circuit Diagram
 -----------------------------
-![alarm-circuit]({{ page.assets_dir }}/image_1.gif)
+![alarm-circuit]({{ site.baseurl }}/{{ page.assets-dir }}/image_1.gif)
 
 Build the Circuit
 -----------------

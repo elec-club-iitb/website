@@ -8,7 +8,7 @@ sections:
     href: serial
   - name: Ultrasonic Sensors
     href: us-sensor
-assets-dir: /assets/tutorials/arduino
+assets-dir: assets/tutorials/arduino
 ---
 
 We often come across an interface between Arduino and various other
@@ -36,7 +36,7 @@ your IDE itself.
 The important part in interfacing with LCDs is the **hardware
 connection**:
 
-![]({{ page.assets-dir }}/image11.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image11.png)
 
 The marked rectangle contains the names of the 16 pins that are usually
 available on an LCD. From them, we connect 8 pins whose numbers are

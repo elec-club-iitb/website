@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  What Next?
-assets-dir: /assets/tutorials/arduino
+assets-dir: assets/tutorials/arduino
 ---
 
 ### Keep Tinkering!
