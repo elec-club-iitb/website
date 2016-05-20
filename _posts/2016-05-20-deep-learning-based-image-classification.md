@@ -9,6 +9,7 @@ category: [Artificial Intelligence]
 tags: [Neural Networks, Deep Learning]
 
 assets-dir: assets/deep-learning-based-image-classification
+header-img: assets/deep-learning-based-image-classification/cover.jpg
 ---
 
 #### Pre-requisites
