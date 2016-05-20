@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Basics of AVR
-assets-dir: /assets/tutorials/avr
+assets-dir: assets/tutorials/avr
 sections:
   - name: Pins
     href: pins
@@ -28,7 +28,7 @@ reset etc.
 
 #### Pinout for ATmega16
 
-![]({{ page.assets-dir }}/image20.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image20.png)
 
 ### Registers <a name="registers"></a>
 

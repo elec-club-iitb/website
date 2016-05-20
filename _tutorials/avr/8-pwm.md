@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pulse Width Modulation
-assets-dir: /assets/tutorials/avr
+assets-dir: assets/tutorials/avr
 ---
 
 As you might know, PWM is a technique to produce Analog-looking output
@@ -28,11 +28,11 @@ Use the Datasheet to find various Modes in which we can use PWM(Waveform
 Generator). We will use the **Fast PWM Mode**, with `ICR1` as Top-most
 value.
 
-![]({{ page.assets-dir }}/image35.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image35.png)
 
 Another thing to be specified is here:
 
-![]({{ page.assets-dir }}/image09.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image09.png)
 
 We will choose the 4th option, i.e. `COM1A1` and `COM1A0` High, so `OCR1A` is
 cleared when it reaches our count from reverse(the top). Let us see this

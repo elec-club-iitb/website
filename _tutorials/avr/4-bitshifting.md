@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bitwise Operations
-assets-dir: /assets/tutorials/avr
+assets-dir: assets/tutorials/avr
 sections:
   - name: Boolean Algebra
     href: boolean-algebra

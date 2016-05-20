@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Interfacing with LCD
-assets-dir: /assets/tutorials/avr
+assets-dir: assets/tutorials/avr
 sections:
   - name: Anatomy
     href: lcd-anatomy
@@ -11,7 +11,7 @@ sections:
 
 ### Anatomy of the LCD Screen <a name="lcd-anatomy"></a>
 
-![]({{ page.assets-dir }}/image32.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image32.png)
 
 ### Controlling the LCD <a name="lcd-control"></a>
 
@@ -74,7 +74,7 @@ set the cursor to (x,y) of the LCD.
 
 #### What we need to know before we can do this:
 
-![]({{ page.assets-dir }}/image30.png)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image30.png)
 
 Each block in the LCD which displays a character is represented by a
 DDRAM block. Hence to set the cursor position we need to set the DDRAM

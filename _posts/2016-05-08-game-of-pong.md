@@ -8,7 +8,7 @@ author: Krishna Subramani
 category: [Electronics, Robotics]
 tags: [Arduino, Shift Registers]
 
-assets_dir: /assets/game-of-pong
+assets-dir: assets/game-of-pong
 header-img: assets/game-of-pong/cover.jpg
 ---
 
@@ -22,7 +22,7 @@ chose to make a 7\*5 LED array(matrix) for our screen.
 
 The Circuit Diagram for the Screen :
 
-![LED Array]({{ page.assets_dir }}/image08.gif)
+![LED Array]({{ site.baseurl }}/{{ page.assets-dir }}/image08.gif)
 
 To check whether the LED matrix was working properly, we tried to make a
 scrolling LED display(Like the one in a Railway Station).
@@ -69,17 +69,17 @@ output of one flip-flop is connected to the input of the next one.
 
 #### Pin Layout and Function Table : (IC is 74HC595)
 
-![IC Connections 1]({{ page.assets_dir }}/image04.png)
-![IC Connections 2]({{ page.assets_dir }}/image09.png)
+![IC Connections 1]({{ site.baseurl }}/{{ page.assets-dir }}/image04.png)
+![IC Connections 2]({{ site.baseurl }}/{{ page.assets-dir }}/image09.png)
 
 
 #### Circuit Diagram :
 
-![Update Circuit]({{ page.assets_dir }}/image02.png)
+![Update Circuit]({{ site.baseurl }}/{{ page.assets-dir }}/image02.png)
 
 #### Arduino Connection Diagram :
 
-![Arduino Connections]({{ page.assets_dir }}/image06.png)
+![Arduino Connections]({{ site.baseurl }}/{{ page.assets-dir }}/image06.png)
 
 #### This is how the IC works :
 

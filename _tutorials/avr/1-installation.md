@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Installation
-assets-dir: /assets/tutorials/avr
+assets-dir: assets/tutorials/avr
 sections:
   - name: Download Atmel Studio
     href: atmel-studio
@@ -17,7 +17,7 @@ computer (by USB). This was very simple in case of Arduino because among
 its peripherals, there was an in-built USB slot. Here we will use a
 “**Development Board**”.
 
-![]({{ page.assets-dir }}/image29.jpg)
+![]({{ site.baseurl }}/{{ page.assets-dir }}/image29.jpg)
 In the picture above, observe 2 main things:
 
  1. **The Programmer**, which is plugged in the computer USB slot: It is
