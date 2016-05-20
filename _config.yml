@@ -6,6 +6,7 @@ logo: assets/ico/logo.png
 email: eciitb@gmail.com
 copyright_name: Electronics Club, IIT Bombay
 description: The electronics enthusiasts of IITB
+meta-description: Website for The Electronics Club of IIT Bombay. Electronics Club is a group of electronics enthusiasts in IITB who conduct sessions and events on electronics for the community.
 #twitter_username: SBootstrap
 github_username:  elec-club-iitb
 #facebook_username:  IronSummitMedia
@@ -16,15 +17,25 @@ markdown: kramdown
 highlighter: rouge
 syntaxtheme: friendly
 paginate: 5
+paginate_path: "blog/page:num"
 exclude: ["scripts", "README.md"]
 gems: ['jekyll-paginate', 'jekyll-sass-converter']
 
 # Configuration for url/path
-baseurl:
-url: http://elec-club-iitb.github.io
+baseurl: /electronics-club/
+url: https://stab-iitb.org/electronics-club
 
 # Permalink
 permalink: /blog/:year/:month/:title/
+
+# navbar menu
+nav_menu:
+    - name: Blog
+      url: "/blog"
+    - name: Tutorials
+      url: "/tutorials"
+    - name: Chat
+      url: "/chat"
 
 # Declaring tutorials collection
 collections:
