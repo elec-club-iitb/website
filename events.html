@@ -3,21 +3,54 @@ layout: page
 title: Events
 description: Wondering what we do?
 ---
+<div id="eventlist">
+{% for event in site.events %}
+        {% capture filename %}{{ event.path | remove:"_events/" | split:"/" | last }}{% endcapture %}
+        {% if filename == "index.md" %}
+		<script>
+                    var xhttp = new XMLHttpRequest()
+                    var folder_id = "{{ event.img-folder.id }}"
+                    var url = "https://www.googleapis.com/drive/v3/files?q='" + folder_id + "'+in+parents&key=AIzaSyB2hEuWPCFBXLJXx7Sib_E_Jv2Nu5WZTdM"
+                    xhttp.open("GET", url, false);
+                    xhttp.send();
+
+                    var files = JSON.parse(xhttp.responseText).files
+                    var list = document.getElementById("eventlist");
+                    
+                    var a = document.createElement("a");
+                    a.setAttribute("href","{{ site.baseurl }}{{ event.url }}")
+
+                    var img = document.createElement("img");
+                    img.className = "img-responsive";
+                    img.setAttribute("src","http://gdriv.es/{{ event.img-folder.name }}/"+files[0].name)
+                    img.setAttribute("alt","{{ event.title }}")
+
+                    var heading = document.createElement("h3");
+                    heading.innerHTML = "{{ event.title }}";
+
+                    a.appendChild(img)
+                    a.appendChild(heading)
+                    list.appendChild(a)
+        </script>
+        <hr>
+       	{% endif %}
+{% endfor %}
+</div>
+<!--
 <link rel="stylesheet" href="/../slider/js-image-slider.css">
 <script src="/../slider/js-image-slider.js" type="text/javascript"></script>
-        
+       
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-  <!-- Indicators -->
+  
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
     <li data-target="#myCarousel" data-slide-to="3"></li>
     <li data-target="#myCarousel" data-slide-to="4"></li>
-    <li data-target="#myCarousel" data-slide-to="5"></li>
   </ol>
 
-  <!-- Wrapper for slides -->
+ 
   <div class="carousel-inner" role="listbox">
     {% for event in site.events %}
           {% capture filename %}{{ event.path | remove:"_events/" | split:"/" | last }}{% endcapture %}
@@ -57,7 +90,7 @@ description: Wondering what we do?
           {% endif %}
     {% endfor %}
   </div>
-  <!-- Left and right controls -->
+  
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" onclick="$('#myCarousel').carousel('prev')">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -67,7 +100,7 @@ description: Wondering what we do?
       <span class="sr-only">Next</span>
     </a>
   </div>
-
+-->
 
 
 
