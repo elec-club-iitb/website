@@ -34,6 +34,8 @@ nav_menu:
       url: "/blog"
     - name: Tutorials
       url: "/tutorials"
+    - name: Events
+      url: "/events"
     - name: Chat
       url: "/chat"
 
