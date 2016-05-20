@@ -6,3 +6,5 @@ vendor/
 Gemfile.lock
 .DS_Store
 Thumbs.db
+node_modules/
+.sass-cache/

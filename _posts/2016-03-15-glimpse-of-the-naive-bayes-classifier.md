@@ -9,6 +9,7 @@ category: [Machine Learning]
 tags: [Machine Learning,OpenCV]
 
 assets_dir: /assets/glimpse-of-the-naive-bayes-classifier
+header-img: assets/glimpse-of-the-naive-bayes-classifier/cover.jpg
 ---
 
 

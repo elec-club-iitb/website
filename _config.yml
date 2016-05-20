@@ -1,7 +1,8 @@
 # Site settings
 #--------------
 title: Electronics Club, IIT Bombay
-header-img: img/home-bg.jpg
+header-img: assets/img/home-bg.jpg
+logo: assets/ico/logo.png
 email: eciitb@gmail.com
 copyright_name: Electronics Club, IIT Bombay
 description: The electronics enthusiasts of IITB
@@ -15,8 +16,8 @@ markdown: kramdown
 highlighter: rouge
 syntaxtheme: friendly
 paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-gems: ['jekyll-paginate']
+exclude: ["scripts", "README.md"]
+gems: ['jekyll-paginate', 'jekyll-sass-converter']
 
 # Configuration for url/path
 baseurl:

@@ -3,6 +3,7 @@ layout: post
 comments: true
 
 assets_dir: /assets/remote-controlling-a-bot-with-android
+header-img: assets/remote-controlling-a-bot-with-android/cover.jpg
 title: Remote Controlling a bot with Android
 excerpt: How we implemented an Android+AVR based remote control for bots participating in XLR8 competition.
 author: Meet Udeshi

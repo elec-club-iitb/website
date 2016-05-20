@@ -7,7 +7,9 @@
 
     {% include nav.html %}
 
-    {{ content }}
+    <div class="content-wrapper">
+        {{ content }}
+    </div>
 
     {% include comments.html %}
 
@@ -27,7 +29,6 @@
 	background-color: rgba(0, 0, 0, 0.6);"}>
 	Go Top
 	</a>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">$(document).ready(function() {
 			// Show or hide the sticky footer button
 			$(window).scroll(function() {
