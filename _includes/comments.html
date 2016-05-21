@@ -10,7 +10,7 @@
 	(function() {
 		var add = function(disqus_script) {
 			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+			dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
 			(document.getElementsByTagName('head')[0] || document.getElementsByID('disqus')[0]).appendChild(dsq);
 		}
 {% if page.comments or page.comment %}		add('embed.js');{% endif %}

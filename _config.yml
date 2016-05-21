@@ -22,7 +22,7 @@ exclude: ["scripts", "README.md"]
 gems: ['jekyll-paginate', 'jekyll-sass-converter']
 
 # Configuration for url/path
-baseurl: /electronics-club/
+baseurl: /electronics-club
 url: https://stab-iitb.org/electronics-club
 
 # Permalink
