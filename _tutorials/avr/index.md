@@ -8,6 +8,7 @@ topic_folder: avr
 title: AVR Programming
 last_updated: 2016-05-18
 excerpt: Learn the concepts of AVR Programming through this tutorial.
+contributors: Krish Mehta, Pranav Sankhe, Sanket Agrawal
 ---
 
 **ATMEL’s AVR** Series of Microcontrollers is a very good option for

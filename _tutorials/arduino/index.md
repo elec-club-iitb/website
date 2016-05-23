@@ -9,6 +9,7 @@ last_updated: 2016-05-16
 excerpt: Learn Arduino right from the basics through this tutorial.
 header-img: assets/tutorials/arduino/cover.jpg
 assets-dir: assets/tutorials/arduino
+contributors: Krish Mehta
 ---
 
 [Arduino](https://www.arduino.cc/) is a great open-source electronics prototyping

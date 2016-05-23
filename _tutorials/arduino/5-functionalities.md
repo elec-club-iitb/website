@@ -46,7 +46,7 @@ void setup() {
 void loop() {
     // fade in from min to max in increments of 5 points:
 
-    for (int fadeValue = 0 ; fadeValue &lt;= 255; fadeValue += 5) {
+    for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 5) {
     // sets the value (range from 0 to 255):
 
     analogWrite(ledPin, fadeValue);
@@ -61,8 +61,8 @@ void loop() {
 {% endhighlight %}
 
 **Note:** Delays are very important while coding microcontrollers. Their
-typical computing speeds lie in ranges of 1GHz, and hence execution of
-any average statement in the code would take approximately &lt;time&gt;.
+typical computing speeds lie in ranges of 1MHz, and hence execution of
+any average statement in the code would take approximately 1μs.
 
 If the above code would be executed without the delay(30) statement, out
 human eye wouldn't be able to perceive the changes so fast and would see

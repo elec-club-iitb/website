@@ -16,7 +16,8 @@ description: Learn at your own pace!
                     </h4>
                 {% endif %}
                 </a>
-                <p class="post-meta">Last updated: {{ tut.last_updated | date: "%B %-d, %Y" }}</p>
+                <p class="post-meta">Last updated: {{ tut.last_updated | date: "%B %-d, %Y" }}<br>
+                Contributors: {{ tut.contributors }}</p>
             </div>
             <hr>
         <!--
