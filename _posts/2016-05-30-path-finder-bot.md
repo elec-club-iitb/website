@@ -70,9 +70,7 @@ Here’s the logic which we adopted in our arduino code:
 
 You can find the code [here](https://github.com/thariq-shanavas/Path-Finder-Bot).
 
-#### Sounds straightforward, but....
-
-*The difficulties faced are documented below:*
+### Sounds straightforward, but...
 
 The first real difficulty was the wheels slipping on the ground. This was sorted out by using rubberised wheels and bringing down the RPM of the motors by lowering the duty cycle of the PWM output to the motors.
 
@@ -80,4 +78,4 @@ The second more serious difficulty was that due to manufacturing tolerances, the
 
 We tried to correct this error calibrating the duty cycle of the PWM signal to the motors but unfortunately this calibration was dependent on battery voltage- when the battery voltage dropped by half a volt, the bot had to be recalibrated. Then we tried adding an IR sensor to the other wheel and add a feedback system for self-calibration, but the Arduino was not fast enough to collect that much data and process it- angular frequencies of the wheels were wrongly calculated and the bot went haywire. The proposed workaround was to use stepper motors, but then we never got around to implementing it- this was done in the few days following the endsems and all of us had to go home by that time.
 
-The error was never great enough to defeat the purpose of the bot- the bot usually reached its target with a tolerance of a few centimeters. The error was noticeable only when the battery was heavily drained.
+The error was never great enough to defeat the purpose of the bot - the bot usually reached its target with a tolerance of a few centimeters. The error was noticeable only when the battery was heavily drained.
