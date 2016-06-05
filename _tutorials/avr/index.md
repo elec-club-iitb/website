@@ -6,7 +6,7 @@ permalink: /tutorials/avr/
 
 topic_folder: avr
 title: AVR Programming
-last_updated: 2016-05-18
+last_updated: 2016-06-05
 excerpt: Learn the concepts of AVR Programming through this tutorial.
 contributors: Krish Mehta, Pranav Sankhe, Sanket Agrawal
 ---

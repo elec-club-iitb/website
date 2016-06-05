@@ -18,6 +18,7 @@ its peripherals, there was an in-built USB slot. Here we will use a
 “**Development Board**”.
 
 ![]({{ site.baseurl }}/{{ page.assets-dir }}/image29.jpg)
+
 In the picture above, observe 2 main things:
 
  1. **The Programmer**, which is plugged in the computer USB slot: It is
@@ -34,5 +35,15 @@ Get the software setup here:
 
 #### <a name="drivers"></a>Install Drivers
 
-After installing ATMEL Studio 7, we need to install Drivers for the
-programmer.
+After installing Atmel Studio 7, we need to install Drivers for the
+programmer. Refer to the following videos for the procedure.
+
+For setting up **avrdude**: [Microcontroller Programming Environment WinAVR Install](https://newbiehack.com/MicrocontrollerProgrammingEnvironmentWinAVRInstall.aspx)
+
+And for configuring the **USBasp tool**: [Microcontroller Installing Atmel Studio](https://newbiehack.com/MicrocontrollersInstallingAtmelStudio6.aspx)
+
+Atmel Studio has the environment for writing and compiling the code for AVR Microcontrollers, but in order to program the microcontroller with a programmer (the chip with an LED at the USB slot in the above picture), we  need to configure the software with a new tool. For this configuration, we must set up **avrdude** (Video 1).
+
+Now, for configuring the **USBasp tool** we need to set certain things since it is different than the normal USBs which we use at the ports. For this we need to configure the new external programming tool as specified in Video 2.
+
+These two steps are very important and it will not be possible to write the code to the AVR Microcontroller properly without getting these configurations right. Refer the given links properly and if you have any doubts you can ask on the [Electronics Club Gitter Rooms](https://gitter.im/elec-club-iitb/avr-arduino).
