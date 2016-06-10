@@ -35,7 +35,7 @@ generic visual feature learning.
 
 ### What is Deep Learning / What makes it “deep”[<sup>1</sup>](http://www.nvidia.com/content/events/geoInt2015/LBrown_DL_Image_ClassificationGEOINT.pdf)?
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image02.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image02.png)
 
 -   1 million parameters
 
@@ -65,7 +65,7 @@ Three methods of training using a Conv Net:
 
 3.  Reinforcement
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image05.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image05.png)
 
 The most common method is to learn the network using a huge set of
 training images. This approach is called the supervised learning of the
@@ -102,7 +102,7 @@ filters is chosen - best example being the Gabor filters - or the
 filters are extracted from the images ‘patches’ with some processing
 done on them.
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image04.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image04.png)
 
 **fig: MNIST dataset classification using k-means clustering**
 

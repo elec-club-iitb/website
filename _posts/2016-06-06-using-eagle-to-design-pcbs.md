@@ -7,7 +7,7 @@ header-img: assets/using-eagle-to-design-pcbs/cover.jpg
 title: Using Eagle to design PCBs
 excerpt: Summary of the PCB design bootcamp taken by Ajinkya Gorad
 author: Krish Mehta
-category: [PCB]
+category: [PCB, Circuits]
 tags: [PCB, Eagle]
 ---
 
@@ -21,7 +21,7 @@ Printed Circuit Board of the required circuit is very useful.
 
 Have a look:
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image03.jpg)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image03.jpg)
 
 **What is Eagle?**
 
@@ -40,7 +40,7 @@ in the final physical way we want.
 
 So, in the session, we decided to make a IC 555 circuit.
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image01.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image01.png)
 
 ### We will go through the following procedure:
 

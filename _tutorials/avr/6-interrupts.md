@@ -36,7 +36,7 @@ triggered through the following ways:
  - Pin being High/Low
  - Serial Communication
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image33.jpg)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image33.jpg)
 
 ### Timer triggered interrupt <a name="timer-interrupt"></a>
 
@@ -47,14 +47,14 @@ We still need to know about the specific bits to be set for triggering
 an interrupt by comparison with timer. This is done by **Clear Timer on
 Compare Mode**.
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image15.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image15.png)
 
 See option 4. This mode clears(resets) the timer on matching with a
 given value.
 
 We also need to enable the time-match-triggered interrupt.
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image08.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image08.png)
 
 We will set `OCIE1A` bit High, thus enabling it. So, when the **timer
 reaches the value** specified(stored) in `OCR1A`, timer will be

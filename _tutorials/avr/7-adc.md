@@ -56,26 +56,26 @@ achieving what setting is mentioned in the code comments.
 
 #### ADSCRA
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image12.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image12.png)
 
 #### ADMUX
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image24.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image24.png)
 
 
 #### Selecting Input Pin
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image10.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image10.png)
 
 
 #### Setting ADC Prescaler
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image11.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image11.png)
 
 
 #### Reference Voltage Selection
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image13.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image13.png)
 
 
 #### Registers for storing the digital output (available in two formats)
@@ -84,10 +84,10 @@ The result, which is a 10-bit number is stored here, and thus 8 bits
 together and two bits after/before the 8
 bits (`ADLAR`=`0`/`1`).
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image34.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image34.png)
 
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image25.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image25.png)
 
 
 ### Code

@@ -8,7 +8,7 @@ Please Refer:
 [https://www.arduino.cc/en/Tutorial/Sketch](https://www.arduino.cc/en/Tutorial/Sketch)
 for basic functions and guidlines on Sketching.
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image01.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image01.png)
 
 The program is **written** in the IDE, **Verified**(compiled) and
 **Uploaded**(burnt) to the board.(Writing the program into the memory on

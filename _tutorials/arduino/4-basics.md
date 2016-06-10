@@ -6,7 +6,7 @@ assets-dir: assets/tutorials/arduino
 
 ### The Connections(Mentioned in Setup)
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image10.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image10.png)
 
 This being our first time, let us look into the setup closely. Please
 read the comments of the code that follows to understand it thoroughly.

@@ -17,7 +17,7 @@ computer (by USB). This was very simple in case of Arduino because among
 its peripherals, there was an in-built USB slot. Here we will use a
 “**Development Board**”.
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image29.jpg)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image29.jpg)
 
 In the picture above, observe 2 main things:
 

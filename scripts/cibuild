@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-bundle exec jekyll build
+bundle exec jekyll build -d _site/electronics-club
 bundle exec ruby scripts/html-proof.rb

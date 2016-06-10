@@ -28,7 +28,7 @@ reset etc.
 
 #### Pinout for ATmega16
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image20.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image20.png)
 
 ### Registers <a name="registers"></a>
 

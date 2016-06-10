@@ -18,7 +18,7 @@ highlighter: rouge
 syntaxtheme: friendly
 paginate: 5
 paginate_path: "blog/page:num"
-exclude: ["scripts", "README.md"]
+exclude: ["scripts", "node_modules","README.md"]
 gems: ['jekyll-paginate', 'jekyll-sass-converter']
 
 # Configuration for url/path

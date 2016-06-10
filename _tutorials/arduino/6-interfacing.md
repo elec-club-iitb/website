@@ -36,7 +36,7 @@ your IDE itself.
 The important part in interfacing with LCDs is the **hardware
 connection**:
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image11.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image11.png)
 
 The marked rectangle contains the names of the 16 pins that are usually
 available on an LCD. From them, we connect 8 pins whose numbers are

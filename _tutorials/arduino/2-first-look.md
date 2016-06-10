@@ -25,7 +25,7 @@ clock speed) and number of input/output pins.
 
 Let us examine one of the simple models, Genuino.
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image08.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image08.png)
 
 The parts, as labelled in the figure, are explained here:
 

@@ -36,7 +36,7 @@ upload process.
 
 Done, now the board is verified and ready to use with any custom code.
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image06.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image06.png)
 
-![]({{ site.baseurl }}/{{ page.assets-dir }}/image07.png)
+![image]({{ site.baseurl }}/{{ page.assets-dir }}/image07.png)
 

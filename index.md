@@ -11,7 +11,7 @@ The Electronics Club is a community of electronics hobbyists and enthusiasts wit
 Initiatives
 ----
 
-We maintain a [community blog](/blog)! Check out the latest blog post:
+We maintain a [community blog]({{ site.baseurl }}/blog)! Check out the latest blog post:
 
 {% for post in site.posts %}
 
