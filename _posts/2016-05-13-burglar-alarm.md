@@ -5,7 +5,7 @@ comments: true
 title: The Making of Burglar Alarm
 excerpt: Discussing the concepts behind this elementary circuit and then moving on to build it.
 author: Arunabh Ghosh
-category: [Electronics]
+category: [Projects]
 tags: [555 Timer, Monostable]
 
 assets-dir: assets/the-making-of-burglar-alarm

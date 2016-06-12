@@ -5,7 +5,7 @@ comments: true
 title: Game Of Pong
 excerpt: Making the classic 'Pong' Game using concept of Shift Registers
 author: Krishna Subramani
-category: [Electronics, Robotics]
+category: [Projects]
 tags: [Arduino, Shift Registers]
 
 assets-dir: assets/game-of-pong

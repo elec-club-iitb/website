@@ -6,7 +6,7 @@ assets-dir: assets/getting-started-with-beaglebone-black
 title: Getting Started with Beaglebone Black
 excerpt: Simple tutorial on using the BBB.
 author: Dhruv Ilesh Shah
-category: [Embedded Development]
+category: [Tutorials]
 tags: [Programming, Development, Tutorial]
 header-img: "assets/getting-started-with-beaglebone-black/cover.jpg"
 ---

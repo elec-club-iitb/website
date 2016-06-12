@@ -6,7 +6,7 @@ assets-dir: assets/meanshift-algorithm-for-image-processing
 title: Meanshift Algorithm for Image Processing
 excerpt: A very basic, yet essential, algorithm for removing noise and forming Clusters in an image.
 author: Dhruv Ilesh Shah
-category: [Image Processing, Robotics]
+category: [Informative]
 tags: [Algorithms, Mean Shift Algorithm]
 header-img: "assets/meanshift-algorithm-for-image-processing/cover.png"
 ---

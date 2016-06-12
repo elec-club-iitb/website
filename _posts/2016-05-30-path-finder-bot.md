@@ -5,7 +5,7 @@ comments: true
 title: Path Finder Bot
 excerpt: A bot which finds its way on its own
 author: Thariq Shanavas
-category: [Electronics, Robotics]
+category: [Projects]
 tags: [Algorithm, Deep Learning]
 
 assets-dir: assets/path-finder-bot

@@ -5,7 +5,7 @@ comments: true
 title: Glimpse Of The Naive Bayes' Classifier
 excerpt: A simple machine learning algorithm explained
 author: Riddhish Bhalodia
-category: [Machine Learning]
+category: [Informative]
 tags: [Machine Learning,OpenCV]
 
 assets-dir: assets/glimpse-of-the-naive-bayes-classifier

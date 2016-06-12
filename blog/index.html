@@ -4,20 +4,16 @@ title: Community Blog
 description: Blog posts contributed by the electronics community of IITB
 ---
 
+<p>
+<b>Filter by Category:</b><br>
+{% for category in site.categories %}
+<a href="{{ site.baseurl }}/blog/{{ category[0] | slugify }}">{{ category[0] }}</a>
+{% if forloop.last == false %} - {% endif %}
+{% endfor %}
+</p>
+
 {% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
-        {% if post.excerpt %}
-        <h4 class="post-subtitle">
-            {{ post.excerpt }}
-        </h4>
-        {% endif %}
-    </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-<hr>
+    {% include blog_item.html %}
 {% endfor %}
 
 <!-- Pager -->

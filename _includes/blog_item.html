@@ -1,0 +1,15 @@
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.excerpt %}
+        <h4 class="post-subtitle">
+            {{ post.excerpt }}
+        </h4>
+        {% endif %}
+    </a>
+    <p class="post-meta">Category: {{ post.categories | category_links }} <br>
+    Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+</div>
+<hr>

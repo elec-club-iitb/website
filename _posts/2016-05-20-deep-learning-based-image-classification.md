@@ -5,7 +5,7 @@ comments: true
 title: Deep Learning Based Image Classification
 excerpt: How deep neural networks can be taught to classify images using deep learning
 author: Yash Bhalgat
-category: [Artificial Intelligence]
+category: [Informative]
 tags: [Neural Networks, Deep Learning]
 
 assets-dir: assets/deep-learning-based-image-classification

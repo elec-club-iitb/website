@@ -5,7 +5,7 @@ comments: true
 title: Working of a Digital Light Processing Projector
 excerpt: Describing the internals and working mechanism, as found in the How Things Work session
 author: Pranav Sankhe
-category: [Electronics, Optics]
+category: [Informative]
 tags: [Light Processing]
 
 assets-dir: assets/working-of-a-dlp-projector

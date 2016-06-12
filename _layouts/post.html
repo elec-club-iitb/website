@@ -12,6 +12,10 @@ layout: default
                     {% if page.excerpt %}
                     <h3 class="subheading">{{ page.excerpt }}</h3>
                     {% endif %}
+                    <h4 class="meta">
+                        <b>Category:</b> {{ page.categories | category_links }} 
+                        <b>Tags:</b> {{ page.tags | join:", "}}
+                    </h4>
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
                 </div>
             </div>
@@ -25,7 +29,7 @@ layout: default
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 content-wrapper">
 
-				{{ content }}
+                {{ content }}
 
                 <hr>
 

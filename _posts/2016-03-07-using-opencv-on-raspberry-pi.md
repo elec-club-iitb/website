@@ -5,7 +5,7 @@ comments: true
 title: Using OpenCV on Raspberry-Pi
 excerpt: Getting OpenCV installed and running on Rpi, with necessary scripts and files
 author: Riddhish Bhalodia
-category: [Electronics, Robotics]
+category: [Tutorials]
 tags: [Raspberry Pi, OpenCV]
 
 assets-dir: assets/using-opencv-on-raspberry-pi

@@ -7,7 +7,7 @@ header-img: assets/remote-controlling-a-bot-with-android/cover.jpg
 title: Remote Controlling a bot with Android
 excerpt: How we implemented an Android+AVR based remote control for bots participating in XLR8 competition.
 author: Meet Udeshi
-category: [AVR, Android]
+category: [Projects]
 tags: [XLR8, Bluetooth, ATtiny]
 ---
 
