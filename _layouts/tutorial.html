@@ -12,7 +12,12 @@ layout: default
                     <h3 class="subheading">{{ page.excerpt }}</h3>
                     {% endif %}
                     <span class="meta">Last updated: {{ page.last_updated | date: site.date_format }}</span>
-                    <span class="meta">Contributors: {{ page.contributors }}</span>
+                    <table class="meta">
+                        <tr>
+                            <td style="border: 0px; padding: 0px">Contributors: </td>
+                            <td style="border: 0px; padding: 0px; padding-left: 5px;">{{ page.contributors }}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
