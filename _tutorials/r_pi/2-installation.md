@@ -35,4 +35,6 @@ To see which port your sdcard belongs to, type:
 
 It may take some time to copy the contents.
 
+### For Windows<a name="windows"></a>
+
 Time to configure your R-pi!
