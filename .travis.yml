@@ -1,13 +1,10 @@
 language: ruby
 rvm:
 - 2.1
-
-# Assume bundler is being used, therefore
-# the `install` step will run `bundle install` by default.
-script: ./scripts/cibuild
-
+script: "./scripts/cibuild"
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GH_REF: github.com/elec-club-iitb/elec-club-iitb.github.io
+  - secure: E3nTj8YSWwBKpV1d8m3w4LlS2q+uFLY8l+myde/vokIquV+WOclOylIVZk3/xOVehj63+O7oOp2izZXJzxASETOzi9v3DvQbfMDkW+FWgjQHp2VfGqteEFgG8SvQpTXJPbAwkDaNvmbUAQWGmfp3vo/zbgO/cvAfTkTAw4jsPxO6XRc2sGgJQPl4jxoxgg6X5L7XOM41TuXw3rM+Q+LT3Z1IluHWLd1lIQdBfDj6DJUq/K/FvJ4SiWouJZwLfSZ0zcTGGZIa+OBIhGl7F5T6vB6fLis+e7yYtwwldh0SUvjLAqSN2G0hfpNigU9gHF+NWvayfE+psL9zOU6b3uOCpvkzmUL2Yzg6afLt1x+tVlw4npFR/3U2JTsvWMke+O9pMzfrYrmnGlIE/+64N+iyQjFoeNvaLKCZgXdf/TeLkLh0EJJdEwqif/VUnT2dDt4mpSNa6olmvAsvboLpgjxZaM/+/8r2doYszshthGvfIHkfyHdwGTBaI53DqhM20/IqP0BpdL02qoxxrlIO1LeDOW85jj+D01+PganZnFo6mPK8/vyY+KNOFHmMM5HPgeHYq7UPSHDlFZVtDjj8UuZLf17ROrtGTbBGrjmaC54Q2eMnjdR3Aqk+bjCNJplar6JKf5x/coBIhKrfAZQFcL7LInp1LiZInWC1tt7EHInLWjE=
 sudo: false

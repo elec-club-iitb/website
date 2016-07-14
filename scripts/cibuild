@@ -1,5 +1,24 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-bundle exec jekyll build -d _site/electronics-club
+bundle exec jekyll build --config _config.yml,_config-github.yml
 bundle exec ruby scripts/html-proof.rb
+
+echo $TRAVIS_PULL_REQUEST $TRAVIS_BRANCH
+if [ "$TRAVIS_PULL_REQUEST" != "false" ] || [ "$TRAVIS_BRANCH" != "master" ];
+then
+    exit 0
+fi
+
+cd _site/
+git init
+
+git config user.name "Travis CI"
+git config user.email "mudeshi1209@gmail.com"
+
+git add --all
+git commit -m "Deploy to GitHub Pages"
+
+echo "Pushing to gh-pages.."
+git push --quiet -f "https://${GH_TOKEN}@${GH_REF}" master:master > /dev/null 2>&1
+echo "Finished pushing to gh-pages.."
