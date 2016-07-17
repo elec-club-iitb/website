@@ -38,7 +38,8 @@ nav_menu:
       url: "/events"
     - name: Chat
       url: "/chat"
-
+    - name: Team
+      url: "/teampage"
 # Declaring tutorials collection
 collections:
   tutorials:
