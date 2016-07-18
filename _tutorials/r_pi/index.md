@@ -5,7 +5,7 @@ assets-dir: assets/tutorials/r_pi
 permalink: /tutorials/r_pi/
 
 topic_folder: r_pi
-title: Introduction to Raspberry Pi
+title: Raspberry Pi
 last_updated: 2016-07-03
 excerpt: Get started with using Raspberry Pi though this tutorial.
 contributors: Arunabh Ghosh, Meet Udeshi, Darshan Tank
