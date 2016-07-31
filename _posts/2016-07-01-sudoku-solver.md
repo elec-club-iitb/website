@@ -5,20 +5,20 @@ comments: true
 assets-dir: assets/sudoku-solver
 header-img: assets/sudoku-solver/cover.jpg
 title: Sudoku Solver
-excerpt: A simple and interesting application of Analog Electronics for Pulse Detection
+excerpt: OpenCV project for reading and solving Sudokus
 author: Anant Jain
 category: [Projects]
 tags: [Algorithm, OpenCV]
 ---
 
-**Sudoku Solver** is the collection of very basic image processing techniques. A very good way to start is the OpenCV library which can be compiled on almost all the platforms. **OpenCV**(open source computer vision )is a library of programming functions mainly aimed at real time computer vision. Through this project ,my main motivation was to explore what OpenCV offers in a little bit detail . There are already many blogs dealing with how to recognise a whole sudoku puzzle but it  was nevertheless  a pleasant experience doing it on my own and writing this blog ( It is pretty obvious that I too would have been lost without all those online resources , blogs , and documentations.)  
+**Sudoku Solver** is the collection of very basic image processing techniques. A very good way to start is the OpenCV library which can be compiled on almost all the platforms. **OpenCV**(open source computer vision )is a library of programming functions mainly aimed at real time computer vision. Through this project ,my main motivation was to explore what OpenCV offers in a little bit detail . There are already many blogs dealing with how to recognise a whole sudoku puzzle but it  was nevertheless  a pleasant experience doing it on my own and writing this blog ( It is pretty obvious that I too would have been lost without all those online resources , blogs , and documentations.)
 
-### **What actually this project does?**  
+### What actually this project does?
 
-It takes an input image of a sudoku and processes the image and identifies the all the whole suduko and return the answer of the sudoku.  
-It involves two major challenges:  
+It takes an input image of a sudoku and processes the image and identifies the all the whole suduko and return the answer of the sudoku.
+It involves two major challenges:
 
-1. Image recognition  
+1. Image recognition
 2. Solving the sudoku puzzle
 
 I was more interested in the image processing part as there are fixed algorithm for solving  the sudoku puzzle so my main focus in this blog would be the image processing part.
@@ -26,24 +26,19 @@ I was more interested in the image processing part as there are fixed algorithm 
 ### **The major steps this will involve are:**
  
 1.  Reading an image
-
 2.  Preprocessing the image ( removal of noises and thresholding the image)
-
 3.  Finding the sudoku square out of the whole image
-
 4.  Extracting the sub-grids of the sudoku.
-
-5. Recognising the digits (OCR)
+5.  Recognising the digits (OCR)
 
 ### **We also need to make a few assumptions :**
 
 1. In the image , the largest square would be that of the sudoku image
-
 2. The puzzle would be oriented reasonably oriented.
 
 **So let's get started, **
 
-First of all we need is an input image.  We need to load a sudoku image .  
+First of all we need is an input image.  We need to load a sudoku image .
 
 ![image]({{ site.baseurl }}/{{ page.assets-dir }}/image1.jpg)
 
@@ -51,16 +46,16 @@ First of all we need is an input image.  We need to load a sudoku image .
      Mat src = imread("sudoku.jpg",CV_LOAD_IMAGE_UNCHANGED);
 {% endhighlight %}
 
-After loading the image ,the first thing to do in any image processing problem is to reduce the amount of data you are dealing with.We started with a full colour high resolution image.The first thing we can do is to convert the image into a gray scale as looking at our sample image having colour is of no use to us.  
+After loading the image ,the first thing to do in any image processing problem is to reduce the amount of data you are dealing with.We started with a full colour high resolution image.The first thing we can do is to convert the image into a gray scale as looking at our sample image having colour is of no use to us.
 
 {% highlight c %}
      Mat srcb;
      cvtColor(src, srcb, COLOR_BGR2GRAY);
 {% endhighlight %}
 
-### IMAGE PREPROCESSING:
+### Image Processing:
 
-After we have converted the image into a gray scale image we need to remove the noises from the image and smoothen the image as without smoothing the image we deal with extra objects which are not needed so it is necessary to remove the noises. There are many functions available in the OpenCV library for blurring the image like blur , GaussianBlur , MedianBlur . I tried them all and the best result I got out of them was with gaussian blur so I used it . Next , what we need to do is to remove other extra information . We are going to threshold the image that is we have either the foreground pixel or the background pixel. There are variety of thresholding techniques available to us in OpenCV library. My personal favourite is a simple adaptive threshold .For each pixel in the image it takes the average value of the surrounding area.  
+After we have converted the image into a gray scale image we need to remove the noises from the image and smoothen the image as without smoothing the image we deal with extra objects which are not needed so it is necessary to remove the noises. There are many functions available in the OpenCV library for blurring the image like blur , GaussianBlur , MedianBlur . I tried them all and the best result I got out of them was with gaussian blur so I used it . Next , what we need to do is to remove other extra information . We are going to threshold the image that is we have either the foreground pixel or the background pixel. There are variety of thresholding techniques available to us in OpenCV library. My personal favourite is a simple adaptive threshold .For each pixel in the image it takes the average value of the surrounding area.
 
 {% highlight c %}
     Mat smooth;
@@ -70,11 +65,11 @@ After we have converted the image into a gray scale image we need to remove the 
     adaptiveThreshold(smooth, thresholded, 255, ADAPTIVE_THRESH_MEAN_C,THRESH_BINARY_INV, 15, 5);
 {% endhighlight %}
 
- I  have done just noise removal and adaptive thresholding and  it is working so haven't done anything extra. Below is the result:  
+ I  have done just noise removal and adaptive thresholding and  it is working so haven't done anything extra. Below is the result:
 
 ![image]({{ site.baseurl }}/{{ page.assets-dir }}/image2.png)
 
-### **EXTRACTING THE SUDOKU** :
+### Extracting the Sudoku :
 
 Now after thresholding we need to find out the sudoku square , for this we made an assumption the main thing in our image would be the sudoku so we need to find the square with the largest area and it would be our sudoku.
 
@@ -106,14 +101,14 @@ Now we find the blob with maximum area .First we filter them by area . We consid
        }
 {% endhighlight %}
 
-Now after finding the blob with maximum area we approximate the countour into a polygon. It removes the unwanted coordiante values in the countour and keeps only the corners.  
+Now after finding the blob with maximum area we approximate the countour into a polygon. It removes the unwanted coordiante values in the countour and keeps only the corners.
 
 {% highlight c %}
     double perimeter = arcLength(contours[p], true);
     approxPolyDP(contours[p], contours[p], 0.01*perimeter, true);
 {% endhighlight %}
 
-Now we draw the contour on our image just to check it.  
+Now we draw the contour on our image just to check it.
 
 {% highlight c %}
     drawContours(src, contours, p, Scalar(255, 0, 0), 1, 8);
@@ -131,7 +126,7 @@ As we have approximated the contours into a square or rectangle we will get only
     int a; 
     int b; 
     double diff1; 
-    double diff2;  
+    double diff2;
     double diffprev2 = 0; 
     double diffprev=0;
     double prevsum2=contours[p][0].x + contours[p][0].y;
@@ -164,7 +159,7 @@ As we have approximated the contours into a square or rectangle we will get only
      }
 {% endhighlight %}
 
-Now we have 4 points in order and now we need corresponding points where they should be mapped.  
+Now we have 4 points in order and now we need corresponding points where they should be mapped.
 
 {% highlight c %}
      Point2f in[4];
@@ -179,7 +174,7 @@ Now we have 4 points in order and now we need corresponding points where they sh
      out[3] = Point2f(0, 450);
 {% endhighlight %}
 
-Now we have the input and output array both what we need to do is apply prespective transformation to get the sudoku part required. Prespective transformation maps a point given by x, y in one quadilateral to a new point X ,Y in another quadilateral.  
+Now we have the input and output array both what we need to do is apply prespective transformation to get the sudoku part required. Prespective transformation maps a point given by x, y in one quadilateral to a new point X ,Y in another quadilateral.
 
 {% highlight c %}
      Mat wrap; Mat mat;
@@ -192,8 +187,8 @@ Now we have the input and output array both what we need to do is apply prespect
 
 ![image]({{ site.baseurl }}/{{ page.assets-dir }}/image4.png)
 
-Now apply the pre-processing as we did earlier and get the thresholded image and now we need to extract each grids centre the digit and then finally apply OCR.  
-So, we can extract each grids as we know our image is a matrix of 450*450 and therefore our every sub grids will be a matrix of 50*50 so we can extract each grid by extracting the sub grids of 50*50 and store all the images in a vector.  
+Now apply the pre-processing as we did earlier and get the thresholded image and now we need to extract each grids centre the digit and then finally apply OCR.
+So, we can extract each grids as we know our image is a matrix of 450*450 and therefore our every sub grids will be a matrix of 50*50 so we can extract each grid by extracting the sub grids of 50*50 and store all the images in a vector.
 
 
 {%highlight c %}
@@ -208,7 +203,7 @@ So, we can extract each grids as we know our image is a matrix of 450*450 and th
      }
 {% endhighlight %}
 
-Now we have each small grid and it may contain digits or not so we will set a threshold pixel if the image contains pixels greater than that then it may contain a digit otherwise it doesnot and now the images with pixels greater than threshold you need to extract the digit and center it rather than testing the image directly as it will increase the changes of correct recogniton. We can extract the digit and centre it in same way as we extracted the main grid , find the  contour  and bound it by rectangle and find the bounding rectangle with greatest area then resize it.(Assumption : the subgrids containing digits will have the digits as the main part).  
+Now we have each small grid and it may contain digits or not so we will set a threshold pixel if the image contains pixels greater than that then it may contain a digit otherwise it doesnot and now the images with pixels greater than threshold you need to extract the digit and center it rather than testing the image directly as it will increase the changes of correct recogniton. We can extract the digit and centre it in same way as we extracted the main grid , find the  contour  and bound it by rectangle and find the bounding rectangle with greatest area then resize it.(Assumption : the subgrids containing digits will have the digits as the main part).
 
 {% highlight c %}
       thresholded32=smallt[i].clone();
@@ -236,7 +231,7 @@ Now we have each small grid and it may contain digits or not so we will set a th
 ![image]({{ site.baseurl }}/{{ page.assets-dir }}/image6.png)
 ![image]({{ site.baseurl }}/{{ page.assets-dir }}/image7.png)
 
-Now we have all the digits centered what we now need to do is apply OCR . There are huge number of techniques for implementing OCR and huge number of pattern recognition algorithm and for my implementation i choose K-Nearest Neighbour algorithm as it is already available in OpenCV library.The algorithm caches all training samples and predicts responses for new sample by analyzing a certain number of the nearest neighbour of the sample using voting and calculated mean. For it you need to create sample data and train those images and recognise digits from previously trained data. I created training samples by collecting images from various sudoku .My training data can be found out on this [link](https://drive.google.com/open?id=0ByDK_y_Ss5KbSFJkU19fSG15QXc).  
+Now we have all the digits centered what we now need to do is apply OCR . There are huge number of techniques for implementing OCR and huge number of pattern recognition algorithm and for my implementation i choose K-Nearest Neighbour algorithm as it is already available in OpenCV library.The algorithm caches all training samples and predicts responses for new sample by analyzing a certain number of the nearest neighbour of the sample using voting and calculated mean. For it you need to create sample data and train those images and recognise digits from previously trained data. I created training samples by collecting images from various sudoku .My training data can be found out on this [link](https://drive.google.com/open?id=0ByDK_y_Ss5KbSFJkU19fSG15QXc).
 
 **This is the code for training the data :** 
 
@@ -294,19 +289,19 @@ Now we have all the digits centered what we now need to do is apply OCR . There 
         knearest.train(trainData,responces);
 {% endhighlight %}
 
-This trains the data and to recognise the number we use the find_nearest of the KNearest class in OpenCV library.  
+This trains the data and to recognise the number we use the find_nearest of the KNearest class in OpenCV library.
 
 {% highlight c %}
      for(int k=0;k<size;k++)
-     {  
+     {
      img123.at<float>(k)=img12.at<float>(k); // storing the pixels value of testing sample into a new mat for testing
 
      }
      float p=knearest.find_nearest(img123.reshape(1,1),1);
 {% endhighlight %}
 
-The accuracy of this method is upto 90% . So to increase the accuracy you may increase number of the training samples but it may not give very good results ,so to improve the accuracy try out other algorithms available which are more accurate.  
+The accuracy of this method is upto 90% . So to increase the accuracy you may increase number of the training samples but it may not give very good results ,so to improve the accuracy try out other algorithms available which are more accurate.
 
-Although,I did not get 100% correct results but anyways it was overall a great learning experience.  
+Although,I did not get 100% correct results but anyways it was overall a great learning experience.
 
 The whole source code can be found [here](https://drive.google.com/open?id=0ByDK_y_Ss5KbS2xtQ0pEOGxkV1E).
