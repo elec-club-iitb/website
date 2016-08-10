@@ -24,29 +24,10 @@ layout: default
                 <hr>
         
        				<div class="slider">
-       					<!--write a code to generate ten images (image url will be same...specify in front matter...and vary index...store images from 1 to 10 may be)
-       				 	<img src="{{ image_url }}"/>
-						-->
+                        {% for img in page.imgs %}
+                        <img alt="{{img}}" src="{{site.baseurl}}/{{page.img-folder}}/{{img}}"/>  
+                        {% endfor %}
 					</div>
-
-				<script>
-                    var xhttp = new XMLHttpRequest()
-                    var folder_id = "{{ page.img-folder.id }}"
-                    var url = "https://www.googleapis.com/drive/v3/files?q='" + folder_id + "'+in+parents&key=AIzaSyB2hEuWPCFBXLJXx7Sib_E_Jv2Nu5WZTdM"
-                    xhttp.open("GET", url, false);
-                    xhttp.send();
-
-                    var files = JSON.parse(xhttp.responseText).files
-                    var slider = document.getElementsByClassName("slider")[0];
-
-                    for(var i=0; i<files.length; i++){
-                        var img = document.createElement("img")
-                        img.setAttribute("src","http://gdriv.es/{{page.img-folder.name}}/"+files[i].name)
-                        img.setAttribute("alt",files[i].name)
-                        slider.appendChild(img)
-                    }
-                </script>
-
 				<hr>
 
 				<!-- iterate over reviews here -->
