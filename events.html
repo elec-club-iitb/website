@@ -4,182 +4,19 @@ title: Events
 description: Wondering what we do?
 ---
 
-<!--
-<div id="eventlist">
-{% for event in site.events %}
-        {% capture filename %}{{ event.path | remove:"_events/" | split:"/" | last }}{% endcapture %}
-        {% if filename == "index.md" %}
-		<script>
-                    var xhttp = new XMLHttpRequest()
-                    var folder_id = "{{ event.img-folder.id }}"
-                    var url = "https://www.googleapis.com/drive/v3/files?q='" + folder_id + "'+in+parents&key=AIzaSyB2hEuWPCFBXLJXx7Sib_E_Jv2Nu5WZTdM"
-                    xhttp.open("GET", url, false);
-                    xhttp.send();
-
-                    var files = JSON.parse(xhttp.responseText).files
-                    var list = document.getElementById("eventlist");
-                    
-                    var a = document.createElement("a");
-                    a.setAttribute("href","{{ site.baseurl }}{{ event.url }}")
-
-                    var img = document.createElement("img");
-                    img.className = "img-responsive";
-                    img.setAttribute("src","http://gdriv.es/{{ event.img-folder.name }}/"+files[0].name)
-                    img.setAttribute("alt","{{ event.title }}")
-
-                    var heading = document.createElement("h3");
-                    heading.innerHTML = "{{ event.title }}";
-
-                    a.appendChild(img)
-                    a.appendChild(heading)
-                    list.appendChild(a)
-        </script>
-        <hr>
-       	{% endif %}
-{% endfor %}
-</div>
--->
-
-
-
-<!--
-<link rel="stylesheet" href="/../slider/js-image-slider.css">
-<script src="/../slider/js-image-slider.js" type="text/javascript"></script>
--->
-	
 From helping people build their first Remote Controlled Car to helping them make an awesome project in just one night, we conduct various amazing events for the tech enthusiastic community of IIT Bombay. We also conduct sessions to help you learn about things as simple as Basic Electronics to topics as advanced as Microcontrollers! Below are some events which we conduct along with the reviews of those attending them.
 
 <hr>
 <div class="slider">
-</div>
 {% for event in site.events %}
           {% capture filename %}{{ event.path | remove:"_events/" | split:"/" | last }}{% endcapture %}
           {% if filename == "index.md" %}
-          <script type="text/javascript">
-          			var xhttp = new XMLHttpRequest()
-                    var folder_id = "{{ event.img-folder.id }}"
-                    var url = "https://www.googleapis.com/drive/v3/files?q='" + folder_id + "'+in+parents&key=AIzaSyB2hEuWPCFBXLJXx7Sib_E_Jv2Nu5WZTdM"
-                    xhttp.open("GET", url, false);
-                    xhttp.send();
-
-                    var files = JSON.parse(xhttp.responseText).files
-                    var slider = document.getElementsByClassName("slider")[0];
-
-                    var div = document.createElement("div");
-                    var a = document.createElement("a");
-                    a.setAttribute("href","{{ site.baseurl }}{{ event.url }}")
-                    var img = document.createElement("img");
-                    img.setAttribute("src","http://gdriv.es/{{ event.img-folder.name }}/"+files[0].name)
-                    img.setAttribute("alt","{{ event.title }}");
-                    
-                    var caption = document.createElement("h3");
-                    caption.innerHTML = "{{ event.title }}";
-
-                    a.appendChild(img)
-                    a.appendChild(caption)
-                    div.appendChild(a)
-                    slider.appendChild(div)
-          </script>
+            <div>
+              <a href="{{ site.baseurl }}{{ event.url }}">
+                  <h2>{{event.title}}</h2>
+                  <img alt="{{ event.imgs | first }}" src="{{site.baseurl}}/{{ event.img-folder }}/{{ event.imgs | first }}"/>
+              </a>
+            </div>
           {% endif %}
 {% endfor %}
-
-<!--
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-  
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-    <li data-target="#myCarousel" data-slide-to="4"></li>
-  </ol>
-
- 
-  <div class="carousel-inner" role="listbox">
-    {% for event in site.events %}
-          {% capture filename %}{{ event.path | remove:"_events/" | split:"/" | last }}{% endcapture %}
-          {% if filename == "index.md" %}
-          <script>
-                    var xhttp = new XMLHttpRequest()
-                    var folder_id = "{{ event.img-folder.id }}"
-                    var url = "https://www.googleapis.com/drive/v3/files?q='" + folder_id + "'+in+parents&key=AIzaSyB2hEuWPCFBXLJXx7Sib_E_Jv2Nu5WZTdM"
-                    xhttp.open("GET", url, false);
-                    xhttp.send();
-
-                    var files = JSON.parse(xhttp.responseText).files
-                    var carousel = document.getElementsByClassName("carousel-inner")[0];
-                    
-                    var div1 = document.createElement("div");
-                    if("{{ event.title }}" == "AVR"){
-                      div1.className = "item active";
-                    }
-                    else{
-                      div1.className = "item";
-                    }
-                    var a = document.createElement("a");
-                    a.setAttribute("href","{{ site.baseurl }}{{ event.url }}")
-                    var img = document.createElement("img");
-                    img.setAttribute("src","http://gdriv.es/{{ event.img-folder.name }}/"+files[0].name)
-                    img.setAttribute("alt","{{ event.title }}");
-                    
-                    var caption = document.createElement("div");
-                    caption.className = "carousel-caption";
-                    caption.innerHTML = "<h3>{{ event.title }}</h3>";
-
-                    a.appendChild(img)
-                    div1.appendChild(a)
-                    div1.appendChild(caption)
-                    carousel.appendChild(div1)
-          </script>
-          {% endif %}
-    {% endfor %}
-  </div>
-  
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" onclick="$('#myCarousel').carousel('prev')">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" onclick="$('#myCarousel').carousel('next')">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
--->
-
-
-
-
-
-
-
-<!--
-    <div id="sliderFrame">
-        <div id="slider">
-        {% for event in site.events %}
-		      {% capture filename %}{{ event.path | remove:"_events/" | split:"/" | last }}{% endcapture %}
-		      {% if filename == "index.md" %}
-          <script>
-                    var xhttp = new XMLHttpRequest()
-                    var folder_id = "{{ event.img-folder.id }}"
-                    var url = "https://www.googleapis.com/drive/v3/files?q='" + folder_id + "'+in+parents&key=AIzaSyB2hEuWPCFBXLJXx7Sib_E_Jv2Nu5WZTdM"
-                    xhttp.open("GET", url, false);
-                    xhttp.send();
-
-                    var files = JSON.parse(xhttp.responseText).files
-                    var slider = document.getElementById("slider");
-                    
-                    var a = document.createElement("a");
-                    a.setAttribute("href","{{ site.baseurl }}{{ event.url }}")
-                    var img = document.createElement("img");
-                    img.setAttribute("src","http://gdriv.es/{{ event.img-folder.name }}/"+files[0].name)
-                    img.setAttribute("alt","{{ event.title }}")
-                    a.appendChild(img)
-                    slider.appendChild(a)
-          </script>
-          <a href="{{ site.baseurl }}{{ event.url }}"> <img src="{{ event.image_path }}" alt="{{ event.title }}" />
-          </a>
-        {% endif %}
-        {% endfor %}
-        </div>
-        </div>
-        -->
+</div>
