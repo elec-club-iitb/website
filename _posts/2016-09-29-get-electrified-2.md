@@ -11,6 +11,7 @@ tags: [Analog Electronics, Xyloband, Audio Amplifier]
 assets-dir: assets/get-electrified-2
 header-img: "assets/get-electrified-2/cover.jpg"
 ---
+
 Greetings from Electronics Club IIT Bombay
 
 We conduct Electrified sessions regularly wherein some basic electronics
@@ -23,7 +24,7 @@ using these devices.
 
 An overview of the content we covered.
 
-**Operational Amplifiers**
+### Operational Amplifiers
 
 Op-amp, as often called, is an extremely versatile devices which is fundamentally a
 voltage amplifying device. Using opamps we can amplify, filter and do a
@@ -32,10 +33,10 @@ mathematical operations such as addition, subtraction , integration and
 differentiation etc.
 
 For more details of Opamps you can refer our
-[*tutorial*](https://stab-iitb.org/electronics-club/tutorials/basic_electronics/)
+[*tutorial*]({{ site.baseurl }}/tutorials/basic_electronics/)
 on basic electronics.
 
-**Bipolar Junction Transistors**
+### Bipolar Junction Transistors
 
 Transistors are three terminal active devices made from different
 semiconductor materials that can act as either an insulator or a
@@ -46,9 +47,10 @@ electronics).
 
 Enough of boring theory I guess, let’s get started with the circuits.
 
-### Projects
+## Projects
 
-**Xyloband**
+
+### Xyloband
 
 Have you ever seen the xylobands which we wear in concerts and they
 flash light according to the music being played. You can make it on your
@@ -76,7 +78,6 @@ So theoretically we have a voltage output of music but you can’t
 directly apply this output to the LED. The reasons being :
 
 1.  The voltage output is in order of about 10-20 millivolts.
-
 2.  The output contains all the frequencies.
 
 To amplify the signal we are using opamps.The next part of the circuit
@@ -110,7 +111,7 @@ divider.
 And we are done with our circuit and you are ready to make the LED dance
 on your music beats.
 
-**Audio Amplifier**
+### Audio Amplifier
 
 In this circuit we play music through our cell phones via an external
 speaker.
