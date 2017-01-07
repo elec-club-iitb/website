@@ -7,6 +7,8 @@ sections:
     href: atmel-studio
   - name: Install Drivers
     href: drivers
+  - name: Install on Linux
+    href: install-linux
 ---
 
 In order to write the code for AVR, and to burn it to the
@@ -47,3 +49,38 @@ Atmel Studio has the environment for writing and compiling the code for AVR Micr
 Now, for configuring the **USBasp tool** we need to set certain things since it is different than the normal USBs which we use at the ports. For this we need to configure the new external programming tool as specified in Video 2.
 
 These two steps are very important and it will not be possible to write the code to the AVR Microcontroller properly without getting these configurations right. Refer the given links properly and if you have any doubts you can ask on the [Electronics Club Gitter Rooms](https://gitter.im/elec-club-iitb/avr-arduino).
+
+#### <a name="install-linux"></a>Installation for Linux
+
+You need to install three packages, `gcc-avr`,`avr-libc` and `avrdude` for compiling and burning to AVR microcontrollers
+
+On ubuntu you can run the command
+
+```
+sudo apt-get install gcc-avr avr-libc avrdude
+```
+
+After that we have prepared a Makefile to compile and burn AVR code on linux.
+You can download the Makefile [here]({{ site.baseurl }}/{{ page.assets-dir }}/Makefile).
+
+Copy this Makefile into your project folder and open it in a text editor. You
+need to edit the first line of the file to be `PROJECT = <filename>`. For eg.
+if the name of your main C file is `test.c`, your first line should be
+
+```
+PROJECT = test
+```
+
+Then run
+
+```
+make
+```
+
+to compile the code and generate HEX file. Then run
+
+```
+sudo make burn
+```
+
+to burn HEX file to AVR after connecting USBasp.
