@@ -23,7 +23,7 @@ Now lets have a closer look at those 40 pins. Here is a pin diagram of those 40 
 ![Raspberry Pi 3 Pin Diagram]({{ site.baseurl }}/{{ page.assets-dir }}/image_1.png)
 We can see that out of the 40 pins
 
-- 26 pins are GPIO pins
+- 27 pins are GPIO pins
 - 8 pins are Ground
 - 2 pins are 5V supply
 - 2 pins are 3.3V supply
