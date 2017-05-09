@@ -16,7 +16,7 @@ Electronics club conducted its last electrified session on 18th March, 2017. It 
 
  
 
-**Where do we begin from to make anything as simple as an adder?**
+##Where do we begin from to make anything as simple as an adder?
 
 We basically use a combinational circuit. Not only an adder but we can even make a subtractor, priority encoder, MUX and what not!
 
@@ -24,17 +24,17 @@ Combinational circuit is basically used for making those circuits which depends 
 
 ![Combinational Logic Circuits]({{ site.baseurl }}/{{ page.assets-dir }}/image_0.png)
 
-**So, let us now begin with how exactly do these combinational circuits function:**
+##So, let us now begin with how exactly do these combinational circuits function:
 
-** Adder:**
+## Adder:
 
 As you can guess an adder simply add two numbers. But why do we need a complicated circuit to just add numbers? Actually, adders are used in the arithmetic logic units in many computers and other kinds of processors.
 
-There are two kinds of adder:
+There are two kinds of adders:
 
-**1)**      **Half adder**
+### 1) Half adder
 
-**2)**      **Full adder**
+### 2) Full adder
 
 The major difference between a half adder and a full adder is that a full-adder has three inputs and two outputs where as a half adder has only two inputs and two outputs. In a full adder, the first two inputs are A and B and the third input is an input carry.
 
@@ -46,13 +46,13 @@ The circuit diagram and truth table of a half adder and full adder is shown belo
 
 	                      
 
-**Subtractor:**
+## Subtractor:
 
 Similarly, a subtractor subtracts two numbers. They are also of two types and as you can guess the two types are:
 
-**1)**      **Half subtractor**
+### 1) Half subtractor
 
-**2)**      **Full subtractor**
+### 2) Full subtractor
 
 Just like in an adder, the subtractor has similar inputs just the difference is that instead of a carry we have a "borrow".
 
@@ -64,11 +64,11 @@ The circuit diagram and truth table of a half subtractor and full subtractor is 
 
                       
 
-**Priority Encoder:**
+## Priority Encoder:
 
 So basically, what a priority encoder do is that it gives the highest priority of the current input as an output. So, when an input with a higher priority is present, all other inputs with a lower priority will be ignored. The priority encoder comes in many different forms with an example of an 8-input priority encoder along with its truth table shown below.
 
-**8-to-3 Bit Priority Encoder:**
+## 8-to-3 Bit Priority Encoder:
 
 ![8 to 3 bit Priority Encoder]({{ site.baseurl }}/{{ page.assets-dir }}/image_5.png)
 
@@ -76,9 +76,9 @@ Where X equals "don’t care", that is it can be either logic “0” or logic �
 
  
 
-**Multiplexer (MUX) and Demultiplexer:**
+## Multiplexer (MUX) and Demultiplexer:
 
-**How are multiple signals combined?**
+## How are multiple signals combined?
 
 MUX is used for this purpose. It has N Select lines, 2N input lines, and it routes one of the input lines to the output. Conceptually, a MUX may be thought of as 2N switches. For a given combination of the select inputs, only one of the switches closes (makes contact), and the others are open.
 
@@ -88,11 +88,9 @@ It is obvious from the name that a demultiplexer do the reverse of what a multip
 
 Circuit diagram and truth table of a multiplexer is shown below:
 
-![4:1 Multiplexer]({{ site.baseurl }}/{{ page.assets-dir }}/image_6.png)  ![Truth Table]({{ site.baseurl }}/{{ page.assets-dir }}/image_7.png) 
+![4:1 Multiplexer]({{ site.baseurl }}/{{ page.assets-dir }}/image_6.png)  ![Truth Table]({{ site.baseurl }}/{{ page.assets-dir }}/image_7.png)
 
-      	
 
- 
 
 Circuit diagram and truth table of a demultiplexer is shown below:
 
@@ -102,7 +100,7 @@ Circuit diagram and truth table of a demultiplexer is shown below:
 
  
 
-**Encoders and decoders:**
+## Encoders and Decoders:
 
 You might be wondering what is the need of an encoder?
 
